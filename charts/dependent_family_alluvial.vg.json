@@ -1,0 +1,360 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Alluvial diagram of the joint distribution of co-resident parent arrangement and dependent-child count. Ribbon thickness represents families in one selected Census snapshot; it is not a transition diagram.",
+  "width": 930,
+  "height": 365,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding",
+    "resize": true
+  },
+  "padding": {
+    "left": 12,
+    "right": 12,
+    "top": 20,
+    "bottom": 16
+  },
+  "background": "#fffefa",
+  "config": {
+    "font": "Arial",
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#526863",
+      "titleColor": "#526863",
+      "domain": false,
+      "tickColor": "#cad5c9",
+      "gridColor": "#e4e8df",
+      "titleFontWeight": "normal"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#526863",
+      "titleColor": "#526863",
+      "titleFontWeight": "normal"
+    }
+  },
+  "signals": [
+    {
+      "name": "censusYear",
+      "value": 2021
+    },
+    {
+      "name": "leftX",
+      "update": "max(84,min(150,width*.23))"
+    },
+    {
+      "name": "rightX",
+      "update": "width-max(82,min(125,width*.2))"
+    },
+    {
+      "name": "hoverKey",
+      "value": "",
+      "on": [
+        {
+          "events": "@ribbonPaths:pointerover",
+          "update": "datum.parent_arrangement+'|'+datum.dependent_children"
+        },
+        {
+          "events": "@ribbonPaths:pointerout",
+          "update": "''"
+        }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "ribbons",
+      "url": "Family_Life_Australia_Data/data/family_alluvial.csv",
+      "format": {
+        "type": "csv",
+        "parse": "auto"
+      },
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.year===censusYear"
+        }
+      ]
+    },
+    {
+      "name": "leftNodes",
+      "source": "ribbons",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": [
+            "parent_arrangement",
+            "arrangement_label",
+            "left_node0",
+            "left_node1"
+          ],
+          "fields": [
+            "families_count"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "families_count"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rightNodes",
+      "source": "ribbons",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": [
+            "dependent_children",
+            "children_label",
+            "right_node0",
+            "right_node1"
+          ],
+          "fields": [
+            "families_count"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "families_count"
+          ]
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "vertical",
+      "type": "linear",
+      "domain": [
+        0,
+        1
+      ],
+      "range": [
+        32,
+        {
+          "signal": "height-4"
+        }
+      ],
+      "zero": true
+    },
+    {
+      "name": "arrangementColor",
+      "type": "ordinal",
+      "domain": [
+        "Registered-married couple",
+        "De facto couple",
+        "One-parent family"
+      ],
+      "range": [
+        "#226b64",
+        "#607d9c",
+        "#b1773a"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "ribbonPaths",
+      "type": "path",
+      "from": {
+        "data": "ribbons"
+      },
+      "encode": {
+        "update": {
+          "path": {
+            "signal": "'M'+(leftX+10)+','+scale('vertical',datum.left0)+'C'+(leftX+(rightX-leftX)*.48)+','+scale('vertical',datum.left0)+' '+(leftX+(rightX-leftX)*.52)+','+scale('vertical',datum.right0)+' '+rightX+','+scale('vertical',datum.right0)+'L'+rightX+','+scale('vertical',datum.right1)+'C'+(leftX+(rightX-leftX)*.52)+','+scale('vertical',datum.right1)+' '+(leftX+(rightX-leftX)*.48)+','+scale('vertical',datum.left1)+' '+(leftX+10)+','+scale('vertical',datum.left1)+'Z'"
+          },
+          "fill": {
+            "scale": "arrangementColor",
+            "field": "parent_arrangement"
+          },
+          "fillOpacity": {
+            "signal": "hoverKey==='' ? .65 : hoverKey===datum.parent_arrangement+'|'+datum.dependent_children ? .95 : .16"
+          },
+          "tooltip": {
+            "signal": "{'Census year':datum.year,'Parent arrangement':datum.parent_arrangement,'Dependent children':datum.dependent_children,'Families':format(datum.families_count,','),'Share within this arrangement':format(datum.within_arrangement_pct,'.1f')+'%'}"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "leftNodes"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "leftX"
+          },
+          "width": {
+            "value": 10
+          },
+          "y": {
+            "scale": "vertical",
+            "field": "left_node0"
+          },
+          "y2": {
+            "scale": "vertical",
+            "field": "left_node1"
+          },
+          "fill": {
+            "scale": "arrangementColor",
+            "field": "parent_arrangement"
+          },
+          "tooltip": {
+            "signal": "{'Families':format(datum.families_count,',')}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leftNodes"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "leftX - 8"
+          },
+          "y": {
+            "signal": "(scale('vertical',datum.left_node0)+scale('vertical',datum.left_node1))/2"
+          },
+          "text": {
+            "signal": "width<500 ? (datum.parent_arrangement==='Registered-married couple' ? 'Married' : datum.parent_arrangement==='De facto couple' ? 'De facto' : 'One parent') : datum.arrangement_label"
+          },
+          "align": {
+            "value": "right"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fill": {
+            "value": "#163b3d"
+          },
+          "fontSize": {
+            "signal": "width<500 ? 10 : 12"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "rightNodes"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "rightX"
+          },
+          "width": {
+            "value": 10
+          },
+          "y": {
+            "scale": "vertical",
+            "field": "right_node0"
+          },
+          "y2": {
+            "scale": "vertical",
+            "field": "right_node1"
+          },
+          "fill": {
+            "value": "#789687"
+          },
+          "tooltip": {
+            "signal": "{'Families':format(datum.families_count,',')}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "rightNodes"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "rightX + 18"
+          },
+          "y": {
+            "signal": "(scale('vertical',datum.right_node0)+scale('vertical',datum.right_node1))/2"
+          },
+          "text": {
+            "signal": "datum.children_label"
+          },
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fill": {
+            "value": "#163b3d"
+          },
+          "fontSize": {
+            "signal": "width<500 ? 10 : 12"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "leftX+5"
+          },
+          "y": {
+            "value": 7
+          },
+          "text": {
+            "value": "Parent arrangement"
+          },
+          "align": {
+            "value": "center"
+          },
+          "fill": {
+            "value": "#526863"
+          },
+          "fontSize": {
+            "value": 11
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "rightX+5"
+          },
+          "y": {
+            "value": 7
+          },
+          "text": {
+            "value": "Dependent children"
+          },
+          "align": {
+            "value": "center"
+          },
+          "fill": {
+            "value": "#526863"
+          },
+          "fontSize": {
+            "value": 11
+          }
+        }
+      }
+    }
+  ]
+}

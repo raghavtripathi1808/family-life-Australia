@@ -1,0 +1,145 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Choropleth of the fall in regional total fertility between the three-year averages ending 2013 and 2024, using matching ASGS 2021 SA4 boundaries. All 88 mapped regions declined.",
+  "width": "container",
+  "height": 510,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding",
+    "resize": true
+  },
+  "background": "#fffefa",
+  "padding": {
+    "left": 8,
+    "right": 16,
+    "top": 18,
+    "bottom": 8
+  },
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e4e8df",
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titlePadding": 12,
+      "tickColor": "#cad5c9",
+      "labelPadding": 6
+    },
+    "legend": {
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titleLimit": 280
+    }
+  },
+  "data": {
+    "url": "assets/sa4_2021.geojson",
+    "format": {
+      "type": "json",
+      "property": "features"
+    }
+  },
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -132,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      -27
+    ]
+  },
+  "params": [
+    {
+      "name": "region",
+      "value": ""
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    "strokeWidth": 0.45
+  },
+  "encoding": {
+    "color": {
+      "field": "properties.fertility_decline",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          0.7
+        ],
+        "range": [
+          "#e9f1e5",
+          "#185b59"
+        ]
+      },
+      "legend": {
+        "title": "Fall in births per woman",
+        "orient": "bottom",
+        "direction": "horizontal",
+        "gradientLength": 240,
+        "values": [
+          0,
+          0.2,
+          0.4,
+          0.6
+        ],
+        "format": ".1f"
+      }
+    },
+    "stroke": {
+      "condition": {
+        "test": "region!=='' && datum.properties.sa4_code_2021===region",
+        "value": "#ad6819"
+      },
+      "value": "#fffefa"
+    },
+    "strokeWidth": {
+      "condition": {
+        "test": "region!=='' && datum.properties.sa4_code_2021===region",
+        "value": 2.4
+      },
+      "value": 0.45
+    },
+    "tooltip": [
+      {
+        "field": "properties.sa4_name",
+        "type": "nominal",
+        "title": "SA4 region"
+      },
+      {
+        "field": "properties.tfr_start_3yr_average",
+        "type": "quantitative",
+        "title": "2013 fertility (3-year average)",
+        "format": ".2f"
+      },
+      {
+        "field": "properties.tfr_end_3yr_average",
+        "type": "quantitative",
+        "title": "2024 fertility (3-year average)",
+        "format": ".2f"
+      },
+      {
+        "field": "properties.fertility_decline",
+        "type": "quantitative",
+        "title": "Fall in births per woman",
+        "format": ".2f"
+      }
+    ]
+  }
+}

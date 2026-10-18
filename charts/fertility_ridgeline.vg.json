@@ -1,0 +1,247 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Ridgeline comparison of five age-specific fertility profiles on one common height scale. The profiles connect five-year age-group rates; they are not estimated distributions of individual birth ages.",
+  "width": 930,
+  "height": 380,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding",
+    "resize": true
+  },
+  "padding": {
+    "left": 54,
+    "right": 18,
+    "top": 30,
+    "bottom": 45
+  },
+  "background": "#fffefa",
+  "config": {
+    "font": "Arial",
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#526863",
+      "titleColor": "#526863",
+      "domain": false,
+      "tickColor": "#cad5c9",
+      "gridColor": "#e4e8df",
+      "titleFontWeight": "normal"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#526863",
+      "titleColor": "#526863",
+      "titleFontWeight": "normal"
+    }
+  },
+  "signals": [
+    {
+      "name": "focusYear",
+      "value": 2024
+    }
+  ],
+  "data": [
+    {
+      "name": "profiles",
+      "url": "Family_Life_Australia_Data/data/fertility_profiles.csv",
+      "format": {
+        "type": "csv",
+        "parse": "auto"
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "age",
+      "type": "linear",
+      "domain": [
+        15,
+        50
+      ],
+      "range": "width",
+      "zero": false
+    },
+    {
+      "name": "rateHeight",
+      "type": "linear",
+      "domain": [
+        0,
+        250
+      ],
+      "range": [
+        0,
+        88
+      ],
+      "zero": true
+    }
+  ],
+  "axes": [
+    {
+      "scale": "age",
+      "orient": "bottom",
+      "title": "Mother’s age group",
+      "values": [
+        17.5,
+        22.5,
+        27.5,
+        32.5,
+        37.5,
+        42.5,
+        47.5
+      ],
+      "labelFontSize": 11,
+      "labelPadding": 8,
+      "encode": {
+        "labels": {
+          "update": {
+            "text": {
+              "signal": "datum.value===17.5 ? '15–19' : datum.value===22.5 ? '20–24' : datum.value===27.5 ? '25–29' : datum.value===32.5 ? '30–34' : datum.value===37.5 ? '35–39' : datum.value===42.5 ? '40–44' : '45–49'"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "facet": {
+          "name": "profile",
+          "data": "profiles",
+          "groupby": "year"
+        }
+      },
+      "encode": {
+        "update": {
+          "y": {
+            "signal": "32 + indexof([1964,1984,2004,2014,2024],datum.year)*(height-45)/4"
+          }
+        }
+      },
+      "marks": [
+        {
+          "type": "rule",
+          "encode": {
+            "update": {
+              "x": {
+                "value": 0
+              },
+              "x2": {
+                "signal": "width"
+              },
+              "y": {
+                "value": 0
+              },
+              "stroke": {
+                "value": "#d9e2d7"
+              },
+              "strokeWidth": {
+                "value": 1
+              }
+            }
+          }
+        },
+        {
+          "type": "area",
+          "from": {
+            "data": "profile"
+          },
+          "sort": {
+            "field": "age_midpoint"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "scale": "age",
+                "field": "age_midpoint"
+              },
+              "y": {
+                "signal": "-scale('rateHeight',datum.births_per_1000_women)"
+              },
+              "y2": {
+                "value": 0
+              },
+              "fill": {
+                "signal": "datum.year===focusYear ? '#226b64' : '#c2d9cb'"
+              },
+              "fillOpacity": {
+                "value": 0.88
+              },
+              "stroke": {
+                "signal": "datum.year===focusYear ? '#174e4e' : '#7b9f8b'"
+              },
+              "strokeWidth": {
+                "value": 1.3
+              }
+            }
+          }
+        },
+        {
+          "type": "symbol",
+          "from": {
+            "data": "profile"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "scale": "age",
+                "field": "age_midpoint"
+              },
+              "y": {
+                "signal": "-scale('rateHeight',datum.births_per_1000_women)"
+              },
+              "size": {
+                "value": 35
+              },
+              "fill": {
+                "value": "#fffefa"
+              },
+              "stroke": {
+                "value": "#226b64"
+              },
+              "opacity": {
+                "signal": "datum.year===focusYear ? 1 : 0"
+              },
+              "tooltip": {
+                "signal": "{'Year':datum.year,'Age group':datum.age_group,'Births per 1,000 women':format(datum.births_per_1000_women,'.1f'),'Period total fertility':format(datum.total_fertility_rate,'.3f')}"
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "encode": {
+            "update": {
+              "x": {
+                "value": -10
+              },
+              "y": {
+                "value": -1
+              },
+              "align": {
+                "value": "right"
+              },
+              "baseline": {
+                "value": "bottom"
+              },
+              "text": {
+                "signal": "parent.year"
+              },
+              "fill": {
+                "value": "#163b3d"
+              },
+              "fontSize": {
+                "value": 12
+              },
+              "fontWeight": {
+                "value": "bold"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

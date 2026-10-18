@@ -1,0 +1,257 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Annual marriage and divorce rates per 1,000 people aged 16+, 2005–2025. These are separate annual event rates and do not measure the share of marriages ending in divorce.",
+  "width": "container",
+  "height": 300,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding",
+    "resize": true
+  },
+  "background": "#fffefa",
+  "padding": {
+    "left": 8,
+    "right": 16,
+    "top": 18,
+    "bottom": 8
+  },
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e4e8df",
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titlePadding": 12,
+      "tickColor": "#cad5c9",
+      "labelPadding": 6
+    },
+    "legend": {
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titleLimit": 280
+    }
+  },
+  "data": {
+    "url": "Family_Life_Australia_Data/data/marriage_trends.csv",
+    "format": {
+      "type": "csv",
+      "parse": "auto"
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          2005,
+          2025
+        ]
+      },
+      "axis": {
+        "title": "Year",
+        "values": [
+          2005,
+          2010,
+          2015,
+          2020,
+          2025
+        ],
+        "format": "d",
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "rate",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          9
+        ]
+      },
+      "axis": {
+        "title": "Events per 1,000 people aged 16+"
+      }
+    },
+    "color": {
+      "field": "event",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Marriages",
+          "Divorces"
+        ],
+        "range": [
+          "#226b64",
+          "#ad6819"
+        ]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "year",
+        "type": "quantitative",
+        "title": "Year",
+        "format": "d"
+      },
+      {
+        "field": "event",
+        "type": "nominal",
+        "title": "Event"
+      },
+      {
+        "field": "rate",
+        "type": "quantitative",
+        "title": "Events per 1,000 people aged 16+",
+        "format": ".1f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "start": 2020,
+            "end": 2021.8
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "color": "#e7e8dc",
+        "opacity": 0.65,
+        "tooltip": false,
+        "aria": false
+      },
+      "encoding": {
+        "x": {
+          "field": "start",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "end"
+        },
+        "y": {
+          "value": 0
+        },
+        "y2": {
+          "value": {
+            "expr": "height"
+          }
+        },
+        "color": {
+          "value": "#e7e8dc"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.4
+      },
+      "transform": [
+        {
+          "fold": [
+            "marriages_per_1000_age16plus",
+            "divorces_per_1000_age16plus"
+          ],
+          "as": [
+            "rate_field",
+            "rate"
+          ]
+        },
+        {
+          "calculate": "datum.rate_field==='marriages_per_1000_age16plus' ? 'Marriages' : 'Divorces'",
+          "as": "event"
+        },
+        {
+          "calculate": "datum.event+' '+format(datum.rate,'.1f')",
+          "as": "direct_label"
+        }
+      ]
+    },
+    {
+      "transform": [
+        {
+          "fold": [
+            "marriages_per_1000_age16plus",
+            "divorces_per_1000_age16plus"
+          ],
+          "as": [
+            "rate_field",
+            "rate"
+          ]
+        },
+        {
+          "calculate": "datum.rate_field==='marriages_per_1000_age16plus' ? 'Marriages' : 'Divorces'",
+          "as": "event"
+        },
+        {
+          "calculate": "datum.event+' '+format(datum.rate,'.1f')",
+          "as": "direct_label"
+        },
+        {
+          "filter": "datum.year===2025"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -5,
+        "dy": -11,
+        "fontWeight": "bold",
+        "fontSize": 11
+      },
+      "encoding": {
+        "text": {
+          "field": "direct_label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "year": 2020.6
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "text": "COVID disruption",
+        "angle": -90,
+        "align": "right",
+        "dy": -7,
+        "fontSize": 10,
+        "color": "#526863",
+        "aria": false,
+        "tooltip": false
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 12
+        },
+        "color": {
+          "value": "#526863"
+        }
+      }
+    }
+  ]
+}

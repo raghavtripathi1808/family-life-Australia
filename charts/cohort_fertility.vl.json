@@ -1,0 +1,183 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Completed cohort fertility by mother birth year, 1905–1975. Each cohort has reached age 49. Annual period fertility is a different measure.",
+  "width": "container",
+  "height": 275,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding",
+    "resize": true
+  },
+  "background": "#fffefa",
+  "padding": {
+    "left": 8,
+    "right": 16,
+    "top": 18,
+    "bottom": 8
+  },
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e4e8df",
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titlePadding": 12,
+      "tickColor": "#cad5c9",
+      "labelPadding": 6
+    },
+    "legend": {
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titleLimit": 280
+    }
+  },
+  "data": {
+    "url": "Family_Life_Australia_Data/data/cohort_fertility.csv",
+    "format": {
+      "type": "csv",
+      "parse": "auto"
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "mother_birth_year",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          1905,
+          1980
+        ]
+      },
+      "axis": {
+        "title": "Mother’s birth year",
+        "values": [
+          1910,
+          1930,
+          1950,
+          1975
+        ],
+        "format": "d",
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "completed_children_per_woman",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          3.5
+        ]
+      },
+      "axis": {
+        "title": "Completed births per woman",
+        "values": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "mother_birth_year",
+        "type": "quantitative",
+        "title": "Mother’s birth year",
+        "format": "d"
+      },
+      {
+        "field": "year_reached_age_49",
+        "type": "quantitative",
+        "title": "Reached age 49",
+        "format": "d"
+      },
+      {
+        "field": "completed_children_per_woman",
+        "type": "quantitative",
+        "title": "Completed births per woman",
+        "format": ".2f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#226b64",
+        "strokeWidth": 2.5
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": {
+            "field": "mother_birth_year",
+            "oneOf": [
+              1932,
+              1975
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 65,
+        "color": "#226b64"
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.mother_birth_year===1932"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 7,
+        "dy": -12,
+        "color": "#163b3d",
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "value": "1932 cohort: 3.10"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.mother_birth_year===1975"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -6,
+        "dy": -12,
+        "color": "#163b3d",
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "value": "1975 cohort: 2.03"
+        }
+      }
+    }
+  ]
+}

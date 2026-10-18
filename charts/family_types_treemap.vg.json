@@ -1,0 +1,255 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Treemap of six exclusive Census family types. Area represents family count in one selected year; labels show percentages of the published all-families total. Couples without resident children include both pre-parenthood and empty-nest families.",
+  "width": 930,
+  "height": 350,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding",
+    "resize": true
+  },
+  "padding": {
+    "left": 12,
+    "right": 12,
+    "top": 20,
+    "bottom": 16
+  },
+  "background": "#fffefa",
+  "config": {
+    "font": "Arial",
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#526863",
+      "titleColor": "#526863",
+      "domain": false,
+      "tickColor": "#cad5c9",
+      "gridColor": "#e4e8df",
+      "titleFontWeight": "normal"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#526863",
+      "titleColor": "#526863",
+      "titleFontWeight": "normal"
+    }
+  },
+  "signals": [
+    {
+      "name": "censusYear",
+      "value": 2021
+    }
+  ],
+  "data": [
+    {
+      "name": "families",
+      "url": "Family_Life_Australia_Data/data/family_types.csv",
+      "format": {
+        "type": "csv",
+        "parse": "auto"
+      },
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.year===censusYear"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.family_type",
+          "as": "id"
+        },
+        {
+          "type": "formula",
+          "expr": "'root'",
+          "as": "parent"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.family_type==='Couple without resident children' ? 'Couple without|resident children' : datum.family_type==='Couple with dependent children' ? 'Couple + dependent|children' : datum.family_type==='Couple with non-dependent children only' ? 'Couple + non-dependent|children' : datum.family_type==='One parent with dependent children' ? 'One parent +|dependent children' : datum.family_type==='One parent with non-dependent children only' ? 'One parent + non-dependent|children' : 'Other family'",
+          "as": "short_label"
+        }
+      ]
+    },
+    {
+      "name": "familyRoot",
+      "values": [
+        {
+          "id": "root",
+          "parent": null,
+          "families_count": 0
+        }
+      ]
+    },
+    {
+      "name": "tree",
+      "source": [
+        "familyRoot",
+        "families"
+      ],
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "families_count",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "method": "squarify",
+          "paddingInner": 3,
+          "paddingOuter": 0,
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth===1"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "familyColor",
+      "type": "ordinal",
+      "domain": [
+        "Couple without resident children",
+        "Couple with dependent children",
+        "Couple with non-dependent children only",
+        "One parent with dependent children",
+        "One parent with non-dependent children only",
+        "Other family"
+      ],
+      "range": [
+        "#317c70",
+        "#8db6a4",
+        "#bfd4c5",
+        "#b1773a",
+        "#d0b58e",
+        "#9aa39b"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "scale": "familyColor",
+            "field": "family_type"
+          },
+          "stroke": {
+            "value": "#fffefa"
+          },
+          "strokeWidth": {
+            "value": 1
+          },
+          "tooltip": {
+            "signal": "{'Census year':datum.year,'Family type':datum.family_type,'Families':format(datum.families_count,','),'Share of all families':format(datum.share_pct,'.1f')+'%'}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0+10"
+          },
+          "y": {
+            "signal": "datum.y0+15"
+          },
+          "text": {
+            "signal": "split(datum.short_label,'|')"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "fontSize": {
+            "signal": "width<500 ? 10 : 12"
+          },
+          "lineHeight": {
+            "value": 16
+          },
+          "fill": {
+            "signal": "datum.family_type==='Couple without resident children' ? '#ffffff' : '#173b39'"
+          },
+          "limit": {
+            "signal": "max(0,datum.x1-datum.x0-16)"
+          },
+          "opacity": {
+            "signal": "datum.y1-datum.y0>44 && datum.x1-datum.x0>85 ? 1 : 0"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0+10"
+          },
+          "y": {
+            "signal": "datum.y1-12"
+          },
+          "text": {
+            "signal": "format(datum.share_pct,'.1f')+'%'"
+          },
+          "fontSize": {
+            "signal": "width<500 ? 12 : 19"
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "signal": "datum.family_type==='Couple without resident children' ? '#ffffff' : '#173b39'"
+          },
+          "opacity": {
+            "signal": "datum.y1-datum.y0>24 && datum.x1-datum.x0>45 ? 1 : 0"
+          }
+        }
+      }
+    }
+  ]
+}

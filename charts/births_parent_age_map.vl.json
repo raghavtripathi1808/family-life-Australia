@@ -1,0 +1,209 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Proportional-symbol map: circle area represents 2024 registered births; colour represents the change in median mother age between 2011 and 2024. Official ABS 2021 SA4 map points and boundaries are used.",
+  "width": "container",
+  "height": 510,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding",
+    "resize": true
+  },
+  "background": "#fffefa",
+  "padding": {
+    "left": 8,
+    "right": 16,
+    "top": 18,
+    "bottom": 8
+  },
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e4e8df",
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titlePadding": 12,
+      "tickColor": "#cad5c9",
+      "labelPadding": 6
+    },
+    "legend": {
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titleLimit": 280,
+      "layout": {
+        "bottom": {
+          "direction": "vertical",
+          "margin": 12,
+          "anchor": "start"
+        }
+      }
+    }
+  },
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -132,
+      0,
+      0
+    ],
+    "center": [
+      0,
+      -27
+    ]
+  },
+  "params": [
+    {
+      "name": "region",
+      "value": ""
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "assets/sa4_2021.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e7ece2",
+        "stroke": "#fffefa",
+        "strokeWidth": 0.5,
+        "tooltip": false
+      }
+    },
+    {
+      "data": {
+        "url": "assets/sa4_points_2021.json",
+        "format": {
+          "type": "json"
+        }
+      },
+      "mark": {
+        "type": "circle",
+        "opacity": 0.82
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "registered_births_2024_count",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              15000
+            ],
+            "range": [
+              0,
+              1800
+            ]
+          },
+          "legend": {
+            "title": "2024 births (circle area)",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "values": [
+              1000,
+              5000,
+              15000
+            ],
+            "format": "~s"
+          }
+        },
+        "color": {
+          "field": "median_mother_age_change_years",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              2.2
+            ],
+            "range": [
+              "#cce2d1",
+              "#185b59"
+            ]
+          },
+          "legend": {
+            "title": "Mother-age increase (years)",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 180,
+            "values": [
+              0,
+              1,
+              2
+            ],
+            "format": ".0f"
+          }
+        },
+        "stroke": {
+          "condition": {
+            "test": "region!=='' && datum.sa4_code_2021===region",
+            "value": "#ad6819"
+          },
+          "value": "#fffefa"
+        },
+        "strokeWidth": {
+          "condition": {
+            "test": "region!=='' && datum.sa4_code_2021===region",
+            "value": 3
+          },
+          "value": 0.7
+        },
+        "tooltip": [
+          {
+            "field": "sa4_name",
+            "type": "nominal",
+            "title": "SA4 region"
+          },
+          {
+            "field": "registered_births_2024_count",
+            "type": "quantitative",
+            "title": "Registered births, 2024",
+            "format": ","
+          },
+          {
+            "field": "median_mother_age_start_years",
+            "type": "quantitative",
+            "title": "Median mother age, 2011",
+            "format": ".1f"
+          },
+          {
+            "field": "median_mother_age_2024_years",
+            "type": "quantitative",
+            "title": "Median mother age, 2024",
+            "format": ".1f"
+          },
+          {
+            "field": "median_mother_age_change_years",
+            "type": "quantitative",
+            "title": "Increase in median mother age (years)",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Population pyramid of never-married people by age and sex. Counts, not age-specific probabilities. A common horizontal scale is retained across Census years.",
+  "width": "container",
+  "height": 385,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding",
+    "resize": true
+  },
+  "background": "#fffefa",
+  "padding": {
+    "left": 8,
+    "right": 16,
+    "top": 18,
+    "bottom": 8
+  },
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e4e8df",
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titlePadding": 12,
+      "tickColor": "#cad5c9",
+      "labelPadding": 6
+    },
+    "legend": {
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titleLimit": 280
+    }
+  },
+  "data": {
+    "url": "Family_Life_Australia_Data/data/marital_status.csv",
+    "format": {
+      "type": "csv",
+      "parse": "auto"
+    }
+  },
+  "params": [
+    {
+      "name": "censusYear",
+      "value": 2021
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "age_group",
+      "type": "ordinal",
+      "sort": [
+        "85+",
+        "80-84",
+        "75-79",
+        "70-74",
+        "65-69",
+        "60-64",
+        "55-59",
+        "50-54",
+        "45-49",
+        "40-44",
+        "35-39",
+        "30-34",
+        "25-29",
+        "20-24",
+        "15-19"
+      ],
+      "axis": {
+        "title": "Age group",
+        "labelExpr": "replace(datum.label,'-','–')",
+        "grid": false
+      }
+    },
+    "x": {
+      "field": "signed_count",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          -800000,
+          800000
+        ]
+      },
+      "axis": {
+        "title": "Never-married people · men left / women right",
+        "labelExpr": "format(abs(datum.value)/1000000,'.1f')+'m'",
+        "tickCount": 5
+      }
+    },
+    "color": {
+      "field": "sex",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Male",
+          "Female"
+        ],
+        "range": [
+          "#576e9d",
+          "#9c5c7e"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top",
+        "direction": "horizontal"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "year",
+        "type": "quantitative",
+        "title": "Census year",
+        "format": "d"
+      },
+      {
+        "field": "sex",
+        "type": "nominal",
+        "title": "Sex"
+      },
+      {
+        "field": "age_group",
+        "type": "ordinal",
+        "title": "Age"
+      },
+      {
+        "field": "people_count",
+        "type": "quantitative",
+        "title": "Never-married people",
+        "format": ","
+      },
+      {
+        "field": "share_pct",
+        "type": "quantitative",
+        "title": "Share of people of this age and sex (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "opacity": 0.9
+      },
+      "transform": [
+        {
+          "filter": "datum.year===censusYear && datum.status==='Never married' && (datum.sex==='Male' || datum.sex==='Female')"
+        },
+        {
+          "calculate": "datum.sex==='Male' ? -datum.people_count : datum.people_count",
+          "as": "signed_count"
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#74877e",
+        "strokeWidth": 1,
+        "aria": false
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        },
+        "y": {
+          "value": 0
+        },
+        "y2": {
+          "value": {
+            "expr": "height"
+          }
+        },
+        "color": {
+          "value": "#74877e"
+        },
+        "tooltip": {
+          "value": null
+        }
+      }
+    }
+  ]
+}

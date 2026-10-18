@@ -1,0 +1,224 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Dorling cartogram of 88 SA4 regions. Circle area represents 2024 population; colour represents the fall in fertility from the three-year averages ending 2013 to 2024. Circle positions were displaced from the Australian equal-area projection to avoid overlaps. Geographic distance and land area are deliberately distorted.",
+  "width": 930,
+  "height": 620,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding",
+    "resize": true
+  },
+  "padding": {
+    "left": 12,
+    "right": 12,
+    "top": 10,
+    "bottom": 12
+  },
+  "background": "#fffefa",
+  "config": {
+    "font": "Arial",
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#526863",
+      "titleColor": "#526863",
+      "domain": false,
+      "tickColor": "#cad5c9",
+      "gridColor": "#e4e8df",
+      "titleFontWeight": "normal"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#526863",
+      "titleColor": "#526863",
+      "titleFontWeight": "normal",
+      "layout": {
+        "bottom": {
+          "direction": "vertical",
+          "margin": 12,
+          "anchor": "start"
+        }
+      }
+    }
+  },
+  "signals": [
+    {
+      "name": "region",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "name": "regions",
+      "url": "assets/sa4_cartogram_layout.json",
+      "format": {
+        "type": "json"
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "cartX",
+      "type": "linear",
+      "domain": [
+        0,
+        1000
+      ],
+      "range": "width",
+      "zero": true
+    },
+    {
+      "name": "cartY",
+      "type": "linear",
+      "domain": [
+        0,
+        650
+      ],
+      "range": [
+        0,
+        {
+          "signal": "height"
+        }
+      ],
+      "zero": true
+    },
+    {
+      "name": "decline",
+      "type": "linear",
+      "domain": [
+        0,
+        0.7
+      ],
+      "range": [
+        "#e9f1e5",
+        "#185b59"
+      ],
+      "zero": true
+    },
+    {
+      "name": "populationArea",
+      "type": "linear",
+      "domain": [
+        0,
+        1000000
+      ],
+      "range": [
+        0,
+        {
+          "signal": "4*0.0024911017301057718/PI*1000000*pow(width/1000,2)"
+        }
+      ],
+      "zero": true
+    }
+  ],
+  "legends": [
+    {
+      "fill": "decline",
+      "title": "Fall in births per woman",
+      "orient": "bottom",
+      "direction": "horizontal",
+      "gradientLength": 180,
+      "values": [
+        0,
+        0.2,
+        0.4,
+        0.6
+      ],
+      "format": ".1f",
+      "titleLimit": 230
+    },
+    {
+      "size": "populationArea",
+      "title": "2024 population (circle area)",
+      "orient": "bottom",
+      "direction": "horizontal",
+      "values": [
+        200000,
+        500000,
+        1000000
+      ],
+      "format": "~s",
+      "symbolType": "circle",
+      "symbolStrokeColor": "#526863",
+      "symbolFillColor": "transparent",
+      "titleLimit": 260
+    }
+  ],
+  "marks": [
+    {
+      "type": "symbol",
+      "from": {
+        "data": "regions"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "cartX",
+            "field": "cartogram_x"
+          },
+          "y": {
+            "scale": "cartY",
+            "field": "cartogram_y"
+          },
+          "shape": {
+            "value": "circle"
+          },
+          "size": {
+            "scale": "populationArea",
+            "field": "population_2024_count"
+          },
+          "fill": {
+            "scale": "decline",
+            "field": "fertility_decline"
+          },
+          "stroke": {
+            "signal": "region!=='' && datum.sa4_code_2021===region ? '#ad6819' : '#fffefa'"
+          },
+          "strokeWidth": {
+            "signal": "region!=='' && datum.sa4_code_2021===region ? 3 : .8"
+          },
+          "tooltip": {
+            "signal": "{'SA4':datum.sa4_name,'Code':datum.sa4_code_2021,'2024 population':format(datum.population_2024_count,','),'2013 fertility (3yr average)':format(datum.tfr_start_3yr_average,'.2f'),'2024 fertility (3yr average)':format(datum.tfr_end_3yr_average,'.2f'),'Fall in births per woman':format(datum.fertility_decline,'.2f')}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "regions"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "cartX",
+            "field": "cartogram_x"
+          },
+          "y": {
+            "scale": "cartY",
+            "field": "cartogram_y"
+          },
+          "text": {
+            "field": "sa4_code_2021"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "signal": "width<500 ? 7 : 9"
+          },
+          "fill": {
+            "signal": "datum.fertility_decline>.4 ? '#ffffff' : '#254e49'"
+          },
+          "opacity": {
+            "signal": "width>500 && datum.cartogram_radius>16 ? 1 : 0"
+          }
+        }
+      }
+    }
+  ]
+}

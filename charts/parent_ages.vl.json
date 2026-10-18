@@ -1,0 +1,185 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Median ages of mothers and fathers for all registered births, 1975–2024. These are not first-parenthood ages.",
+  "width": "container",
+  "height": 275,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding",
+    "resize": true
+  },
+  "background": "#fffefa",
+  "padding": {
+    "left": 8,
+    "right": 16,
+    "top": 18,
+    "bottom": 8
+  },
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e4e8df",
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titlePadding": 12,
+      "tickColor": "#cad5c9",
+      "labelPadding": 6
+    },
+    "legend": {
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titleLimit": 280
+    }
+  },
+  "data": {
+    "url": "Family_Life_Australia_Data/data/birth_trends.csv",
+    "format": {
+      "type": "csv",
+      "parse": "auto"
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year>=1975"
+    },
+    {
+      "fold": [
+        "median_mother_age_years",
+        "median_father_age_years"
+      ],
+      "as": [
+        "parent_field",
+        "age"
+      ]
+    },
+    {
+      "calculate": "datum.parent_field==='median_mother_age_years' ? 'Mothers' : 'Fathers'",
+      "as": "parent"
+    },
+    {
+      "calculate": "datum.parent + ' ' + format(datum.age,'.1f')",
+      "as": "direct_label"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "axis": {
+        "title": "Registration year",
+        "format": "d",
+        "values": [
+          1975,
+          1990,
+          2005,
+          2024
+        ],
+        "grid": false
+      },
+      "scale": {
+        "domain": [
+          1975,
+          2024
+        ]
+      }
+    },
+    "y": {
+      "field": "age",
+      "type": "quantitative",
+      "axis": {
+        "title": "Median age (years)"
+      },
+      "scale": {
+        "domain": [
+          20,
+          37
+        ],
+        "zero": false
+      }
+    },
+    "color": {
+      "field": "parent",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Fathers",
+          "Mothers"
+        ],
+        "range": [
+          "#576e9d",
+          "#9c5c7e"
+        ]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "year",
+        "type": "quantitative",
+        "title": "Registration year",
+        "format": "d"
+      },
+      {
+        "field": "parent",
+        "type": "nominal",
+        "title": "Parent"
+      },
+      {
+        "field": "age",
+        "type": "quantitative",
+        "title": "Median age",
+        "format": ".1f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.4
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year===2024"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 50
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year===2024"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -4,
+        "dy": -11,
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "direct_label"
+        }
+      }
+    }
+  ]
+}

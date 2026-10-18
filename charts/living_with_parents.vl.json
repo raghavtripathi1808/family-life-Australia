@@ -1,0 +1,215 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "HILDA weighted estimates of young adults living with parents, 2001 and 2024. Same-age groups are compared at two dates. Published significance notes are retained.",
+  "width": "container",
+  "height": 325,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding",
+    "resize": true
+  },
+  "background": "#fffefa",
+  "padding": {
+    "left": 8,
+    "right": 16,
+    "top": 18,
+    "bottom": 8
+  },
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e4e8df",
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titlePadding": 12,
+      "tickColor": "#cad5c9",
+      "labelPadding": 6
+    },
+    "legend": {
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titleLimit": 280
+    }
+  },
+  "data": {
+    "url": "Family_Life_Australia_Data/data/living_with_parents.csv",
+    "format": {
+      "type": "csv",
+      "parse": "auto"
+    }
+  },
+  "params": [
+    {
+      "name": "selectedSex",
+      "value": "People"
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.sex===selectedSex && datum.age_group!=='All 18-29' && (datum.year===2001 || datum.year===2024)"
+    },
+    {
+      "calculate": "replace(datum.age_group,'-','–')+' · '+format(datum.living_with_parents_pct,'.1f')+'%'",
+      "as": "start_label"
+    },
+    {
+      "calculate": "format(datum.living_with_parents_pct,'.1f')+'%'",
+      "as": "end_label"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          1999,
+          2026
+        ]
+      },
+      "axis": {
+        "title": null,
+        "values": [
+          2001,
+          2024
+        ],
+        "format": "d",
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "living_with_parents_pct",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      },
+      "axis": {
+        "title": "Living with parents (%)",
+        "values": [
+          0,
+          25,
+          50,
+          75,
+          100
+        ]
+      }
+    },
+    "color": {
+      "field": "age_group",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "18-21",
+          "22-25",
+          "26-29"
+        ],
+        "range": [
+          "#226b64",
+          "#ad6819",
+          "#607d9c"
+        ]
+      },
+      "legend": null
+    },
+    "detail": {
+      "field": "age_group"
+    },
+    "tooltip": [
+      {
+        "field": "year",
+        "type": "quantitative",
+        "title": "Year",
+        "format": "d"
+      },
+      {
+        "field": "sex",
+        "type": "nominal",
+        "title": "Group"
+      },
+      {
+        "field": "age_group",
+        "type": "ordinal",
+        "title": "Age group"
+      },
+      {
+        "field": "living_with_parents_pct",
+        "type": "quantitative",
+        "title": "Living with parents (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "change_significance",
+        "type": "nominal",
+        "title": "Published change significance"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 65
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year===2001"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 7,
+        "dy": -12,
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "start_label"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year===2024"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -7,
+        "dy": -12,
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "end_label"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Mosaic of age and co-resident partnership arrangements. Column width represents the age-group population, height the within-age status share; area represents people. People aged 15+ in the Census social-marital-status population.",
+  "width": "container",
+  "height": 305,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding",
+    "resize": true
+  },
+  "background": "#fffefa",
+  "padding": {
+    "left": 8,
+    "right": 16,
+    "top": 18,
+    "bottom": 8
+  },
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "gridColor": "#e4e8df",
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titlePadding": 12,
+      "tickColor": "#cad5c9",
+      "labelPadding": 6
+    },
+    "legend": {
+      "labelColor": "#526863",
+      "labelFontSize": 11,
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "titleLimit": 280
+    }
+  },
+  "data": {
+    "url": "Family_Life_Australia_Data/data/partnership_mosaic.csv",
+    "format": {
+      "type": "csv",
+      "parse": "auto"
+    }
+  },
+  "params": [
+    {
+      "name": "censusYear",
+      "value": 2021
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.year===censusYear"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "x0",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      },
+      "axis": null
+    },
+    "x2": {
+      "field": "x1"
+    },
+    "y": {
+      "field": "y0",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      },
+      "axis": {
+        "title": "Share within age group (%)",
+        "values": [
+          0,
+          25,
+          50,
+          75,
+          100
+        ]
+      }
+    },
+    "y2": {
+      "field": "y1"
+    },
+    "color": {
+      "field": "status",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Registered marriage",
+          "De facto partnership",
+          "Not partnered"
+        ],
+        "range": [
+          "#226b64",
+          "#ad6819",
+          "#dce5d9"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "orient": "bottom",
+        "direction": "horizontal",
+        "labelLimit": 200,
+        "columns": 3
+      }
+    },
+    "tooltip": [
+      {
+        "field": "year",
+        "type": "quantitative",
+        "title": "Census year",
+        "format": "d"
+      },
+      {
+        "field": "age_group",
+        "type": "ordinal",
+        "title": "Age group"
+      },
+      {
+        "field": "status",
+        "type": "nominal",
+        "title": "Arrangement"
+      },
+      {
+        "field": "people_count",
+        "type": "quantitative",
+        "title": "People",
+        "format": ","
+      },
+      {
+        "field": "share_pct",
+        "type": "quantitative",
+        "title": "Share within this age group (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "#fffefa",
+        "strokeWidth": 1.2
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.status==='Not partnered'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -10,
+        "color": "#163b3d",
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "x_mid",
+          "type": "quantitative"
+        },
+        "x2": null,
+        "y": {
+          "value": 0
+        },
+        "y2": null,
+        "text": {
+          "field": "age_group"
+        },
+        "color": {
+          "value": "#163b3d"
+        }
+      }
+    }
+  ]
+}
