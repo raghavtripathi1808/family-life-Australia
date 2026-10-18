@@ -1,0 +1,529 @@
+sa4_code_2021,sa4_name,year,family_type,source_count_1,source_count_2,source_count_3,families_count,all_families_count,share_pct,source_id,source_fields
+101,Capital Region,2021,Couple without resident children,29944,,,29944,64508,46.41904880014882,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+101,Capital Region,2021,Couple with dependent children,17012,1052,1742,19806,64508,30.7031685992435,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+101,Capital Region,2021,Couple with non-dependent children only,4773,,,4773,64508,7.3990822843678306,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+101,Capital Region,2021,One parent with dependent children,4793,288,739,5820,64508,9.022136789235443,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+101,Capital Region,2021,One parent with non-dependent children only,3437,,,3437,64508,5.328021330687667,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+101,Capital Region,2021,Other family,724,,,724,64508,1.1223414150182922,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+102,Central Coast,2021,Couple without resident children,37532,,,37532,94861,39.565258641591385,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+102,Central Coast,2021,Couple with dependent children,25338,1929,2842,30109,94861,31.74012502503663,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+102,Central Coast,2021,Couple with non-dependent children only,7792,,,7792,94861,8.21412382327827,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+102,Central Coast,2021,One parent with dependent children,8906,688,1494,11088,94861,11.688681333740947,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+102,Central Coast,2021,One parent with non-dependent children only,7103,,,7103,94861,7.487797935927304,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+102,Central Coast,2021,Other family,1228,,,1228,94861,1.2945256744078177,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+103,Central West,2021,Couple without resident children,23651,,,23651,55419,42.67669932694563,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+103,Central West,2021,Couple with dependent children,15399,800,1470,17669,55419,31.882567350547646,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+103,Central West,2021,Couple with non-dependent children only,3869,,,3869,55419,6.981360183330626,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+103,Central West,2021,One parent with dependent children,5249,249,650,6148,55419,11.09366823652538,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+103,Central West,2021,One parent with non-dependent children only,3282,,,3282,55419,5.9221566610729175,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+103,Central West,2021,Other family,796,,,796,55419,1.4363305003699094,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+104,Coffs Harbour - Grafton,2021,Couple without resident children,18169,,,18169,39359,46.16225005716609,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+104,Coffs Harbour - Grafton,2021,Couple with dependent children,9237,480,911,10628,39359,27.00271856500419,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+104,Coffs Harbour - Grafton,2021,Couple with non-dependent children only,2775,,,2775,39359,7.050484006199345,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+104,Coffs Harbour - Grafton,2021,One parent with dependent children,3856,205,531,4592,39359,11.666963083411671,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+104,Coffs Harbour - Grafton,2021,One parent with non-dependent children only,2654,,,2654,39359,6.743057496379482,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+104,Coffs Harbour - Grafton,2021,Other family,543,,,543,39359,1.3796082217536014,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+105,Far West and Orana,2021,Couple without resident children,11773,,,11773,28335,41.549320628198345,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+105,Far West and Orana,2021,Couple with dependent children,7585,375,623,8583,28335,30.291159343568026,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+105,Far West and Orana,2021,Couple with non-dependent children only,1903,,,1903,28335,6.71607552496912,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+105,Far West and Orana,2021,One parent with dependent children,3258,125,328,3711,28335,13.096876654314451,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+105,Far West and Orana,2021,One parent with non-dependent children only,1850,,,1850,28335,6.529027704252691,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+105,Far West and Orana,2021,Other family,518,,,518,28335,1.8281277571907535,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+106,Hunter Valley exc Newcastle,2021,Couple without resident children,32939,,,32939,80651,40.84140308241683,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+106,Hunter Valley exc Newcastle,2021,Couple with dependent children,22417,1439,2043,25899,80651,32.112435059701674,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+106,Hunter Valley exc Newcastle,2021,Couple with non-dependent children only,6542,,,6542,80651,8.111492727926498,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+106,Hunter Valley exc Newcastle,2021,One parent with dependent children,7897,439,971,9307,80651,11.539844515257096,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+106,Hunter Valley exc Newcastle,2021,One parent with non-dependent children only,4964,,,4964,80651,6.154914384198584,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+106,Hunter Valley exc Newcastle,2021,Other family,987,,,987,80651,1.223791397502821,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+107,Illawarra,2021,Couple without resident children,33226,,,33226,85470,38.874458874458874,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+107,Illawarra,2021,Couple with dependent children,24027,2046,2776,28849,85470,33.75336375336375,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+107,Illawarra,2021,Couple with non-dependent children only,7820,,,7820,85470,9.149409149409149,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+107,Illawarra,2021,One parent with dependent children,6675,604,1270,8549,85470,10.002340002340002,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+107,Illawarra,2021,One parent with non-dependent children only,5825,,,5825,85470,6.815256815256815,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+107,Illawarra,2021,Other family,1200,,,1200,85470,1.4040014040014042,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+108,Mid North Coast,2021,Couple without resident children,31544,,,31544,62940,50.117572291070864,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+108,Mid North Coast,2021,Couple with dependent children,12861,764,1372,14997,62940,23.82745471877979,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+108,Mid North Coast,2021,Couple with non-dependent children only,4387,,,4387,62940,6.970130282809024,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+108,Mid North Coast,2021,One parent with dependent children,5740,289,815,6844,62940,10.873848109310455,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+108,Mid North Coast,2021,One parent with non-dependent children only,4306,,,4306,62940,6.841436288528757,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+108,Mid North Coast,2021,Other family,856,,,856,62940,1.360025421035907,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+109,Murray,2021,Couple without resident children,14895,,,14895,32339,46.05893812424627,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+109,Murray,2021,Couple with dependent children,8533,504,830,9867,32339,30.51114753084511,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+109,Murray,2021,Couple with non-dependent children only,2166,,,2166,32339,6.697795231763505,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+109,Murray,2021,One parent with dependent children,2749,157,418,3324,32339,10.278610965088593,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+109,Murray,2021,One parent with non-dependent children only,1682,,,1682,32339,5.201150313862519,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+109,Murray,2021,Other family,407,,,407,32339,1.2585423173258294,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+110,New England and North West,2021,Couple without resident children,20802,,,20802,47169,44.10099853717484,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+110,New England and North West,2021,Couple with dependent children,12329,599,1187,14115,47169,29.92431469821281,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+110,New England and North West,2021,Couple with non-dependent children only,3073,,,3073,47169,6.51487205579936,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+110,New England and North West,2021,One parent with dependent children,4833,203,554,5590,47169,11.851003837266001,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+110,New England and North West,2021,One parent with non-dependent children only,2799,,,2799,47169,5.933982064491509,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+110,New England and North West,2021,Other family,785,,,785,47169,1.6642286247323452,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+111,Newcastle and Lake Macquarie,2021,Couple without resident children,42710,,,42710,105250,40.579572446555815,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+111,Newcastle and Lake Macquarie,2021,Couple with dependent children,28806,2074,3421,34301,105250,32.590023752969124,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+111,Newcastle and Lake Macquarie,2021,Couple with non-dependent children only,8205,,,8205,105250,7.7957244655581945,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+111,Newcastle and Lake Macquarie,2021,One parent with dependent children,8960,671,1704,11335,105250,10.76959619952494,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+111,Newcastle and Lake Macquarie,2021,One parent with non-dependent children only,7022,,,7022,105250,6.671733966745844,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+111,Newcastle and Lake Macquarie,2021,Other family,1678,,,1678,105250,1.5942992874109263,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+112,Richmond - Tweed,2021,Couple without resident children,29885,,,29885,67549,44.241957689973205,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+112,Richmond - Tweed,2021,Couple with dependent children,16546,938,1776,19260,67549,28.512635272172794,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+112,Richmond - Tweed,2021,Couple with non-dependent children only,4975,,,4975,67549,7.365023908570074,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+112,Richmond - Tweed,2021,One parent with dependent children,6165,382,1123,7670,67549,11.354720277132156,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+112,Richmond - Tweed,2021,One parent with non-dependent children only,4827,,,4827,67549,7.145923699832714,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+112,Richmond - Tweed,2021,Other family,927,,,927,67549,1.3723371182400923,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+113,Riverina,2021,Couple without resident children,17471,,,17471,41934,41.66308961701722,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+113,Riverina,2021,Couple with dependent children,12111,734,1068,13913,41934,33.17832784852387,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+113,Riverina,2021,Couple with non-dependent children only,3095,,,3095,41934,7.3806457766967135,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+113,Riverina,2021,One parent with dependent children,3842,223,453,4518,41934,10.774073544140792,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+113,Riverina,2021,One parent with non-dependent children only,2335,,,2335,41934,5.568273954309152,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+113,Riverina,2021,Other family,601,,,601,41934,1.4332045595459533,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+114,Southern Highlands and Shoalhaven,2021,Couple without resident children,22138,,,22138,44864,49.344686162624825,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+114,Southern Highlands and Shoalhaven,2021,Couple with dependent children,10450,622,1118,12190,44864,27.171005706134093,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+114,Southern Highlands and Shoalhaven,2021,Couple with non-dependent children only,3161,,,3161,44864,7.045738231098431,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+114,Southern Highlands and Shoalhaven,2021,One parent with dependent children,3280,203,533,4016,44864,8.951497860199714,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+114,Southern Highlands and Shoalhaven,2021,One parent with non-dependent children only,2816,,,2816,44864,6.276747503566334,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+114,Southern Highlands and Shoalhaven,2021,Other family,537,,,537,44864,1.196950784593438,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+115,Sydney - Baulkham Hills and Hawkesbury,2021,Couple without resident children,23351,,,23351,74456,31.362146771247446,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+115,Sydney - Baulkham Hills and Hawkesbury,2021,Couple with dependent children,27288,2998,4470,34756,74456,46.679918341033634,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+115,Sydney - Baulkham Hills and Hawkesbury,2021,Couple with non-dependent children only,8257,,,8257,74456,11.08977114000215,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+115,Sydney - Baulkham Hills and Hawkesbury,2021,One parent with dependent children,3087,489,953,4529,74456,6.082787149457398,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+115,Sydney - Baulkham Hills and Hawkesbury,2021,One parent with non-dependent children only,3022,,,3022,74456,4.058772966584291,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+115,Sydney - Baulkham Hills and Hawkesbury,2021,Other family,547,,,547,74456,0.7346620823036425,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+116,Sydney - Blacktown,2021,Couple without resident children,26949,,,26949,105312,25.58967639015497,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+116,Sydney - Blacktown,2021,Couple with dependent children,41708,3135,4387,49230,105312,46.74680948040109,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+116,Sydney - Blacktown,2021,Couple with non-dependent children only,10021,,,10021,105312,9.515534791856577,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+116,Sydney - Blacktown,2021,One parent with dependent children,8302,808,1346,10456,105312,9.928593132786387,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+116,Sydney - Blacktown,2021,One parent with non-dependent children only,6903,,,6903,105312,6.554808568824065,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+116,Sydney - Blacktown,2021,Other family,1742,,,1742,105312,1.654132482528107,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+117,Sydney - City and Inner South,2021,Couple without resident children,42915,,,42915,77158,55.61963762668809,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+117,Sydney - City and Inner South,2021,Couple with dependent children,17185,748,2004,19937,77158,25.8391871225278,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+117,Sydney - City and Inner South,2021,Couple with non-dependent children only,3135,,,3135,77158,4.063091319111434,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+117,Sydney - City and Inner South,2021,One parent with dependent children,3757,327,1301,5385,77158,6.9791855672775345,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+117,Sydney - City and Inner South,2021,One parent with non-dependent children only,3537,,,3537,77158,4.58410015811711,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+117,Sydney - City and Inner South,2021,Other family,2259,,,2259,77158,2.927758625158765,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+118,Sydney - Eastern Suburbs,2021,Couple without resident children,27848,,,27848,65351,42.61296690180716,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+118,Sydney - Eastern Suburbs,2021,Couple with dependent children,19717,1236,3213,24166,65351,36.9787761472663,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+118,Sydney - Eastern Suburbs,2021,Couple with non-dependent children only,3714,,,3714,65351,5.68315710547658,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+118,Sydney - Eastern Suburbs,2021,One parent with dependent children,3668,341,1294,5303,65351,8.114642469128245,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+118,Sydney - Eastern Suburbs,2021,One parent with non-dependent children only,3130,,,3130,65351,4.789521200899757,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+118,Sydney - Eastern Suburbs,2021,Other family,1193,,,1193,65351,1.8255267708221758,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+119,Sydney - Inner South West,2021,Couple without resident children,49457,,,49457,155806,31.74267999948654,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+119,Sydney - Inner South West,2021,Couple with dependent children,48516,4801,6612,59929,155806,38.46385890145437,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+119,Sydney - Inner South West,2021,Couple with non-dependent children only,16601,,,16601,155806,10.654917012181816,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+119,Sydney - Inner South West,2021,One parent with dependent children,10110,1442,2783,14335,155806,9.200544266587936,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+119,Sydney - Inner South West,2021,One parent with non-dependent children only,12060,,,12060,155806,7.7403951067353,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+119,Sydney - Inner South West,2021,Other family,3420,,,3420,155806,2.1950374183279204,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+120,Sydney - Inner West,2021,Couple without resident children,32804,,,32804,80741,40.62867688039534,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+120,Sydney - Inner West,2021,Couple with dependent children,24016,1701,3806,29523,80741,36.565066075475904,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+120,Sydney - Inner West,2021,Couple with non-dependent children only,5823,,,5823,80741,7.211949319428792,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+120,Sydney - Inner West,2021,One parent with dependent children,4025,437,1663,6125,80741,7.585984815645087,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+120,Sydney - Inner West,2021,One parent with non-dependent children only,4566,,,4566,80741,5.655119456038444,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+120,Sydney - Inner West,2021,Other family,1894,,,1894,80741,2.345772284217436,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+121,Sydney - North Sydney and Hornsby,2021,Couple without resident children,44467,,,44467,117818,37.74211071313381,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+121,Sydney - North Sydney and Hornsby,2021,Couple with dependent children,39764,2873,7659,50296,117818,42.689572051808724,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+121,Sydney - North Sydney and Hornsby,2021,Couple with non-dependent children only,7750,,,7750,117818,6.57794224991088,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+121,Sydney - North Sydney and Hornsby,2021,One parent with dependent children,5901,622,2541,9064,117818,7.693221748798996,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+121,Sydney - North Sydney and Hornsby,2021,One parent with non-dependent children only,4702,,,4702,117818,3.990901220526575,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+121,Sydney - North Sydney and Hornsby,2021,Other family,1542,,,1542,117818,1.308798316046784,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+122,Sydney - Northern Beaches,2021,Couple without resident children,26993,,,26993,72448,37.25844743816255,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+122,Sydney - Northern Beaches,2021,Couple with dependent children,24211,2199,4027,30437,72448,42.01220185512368,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+122,Sydney - Northern Beaches,2021,Couple with non-dependent children only,5714,,,5714,72448,7.887036219081272,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+122,Sydney - Northern Beaches,2021,One parent with dependent children,3621,458,1208,5287,72448,7.2976479681978805,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+122,Sydney - Northern Beaches,2021,One parent with non-dependent children only,3296,,,3296,72448,4.54946996466431,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+122,Sydney - Northern Beaches,2021,Other family,713,,,713,72448,0.9841541519434629,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+123,Sydney - Outer South West,2021,Couple without resident children,23900,,,23900,80068,29.849627816356094,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+123,Sydney - Outer South West,2021,Couple with dependent children,27892,2208,2595,32695,80068,40.83404106509467,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+123,Sydney - Outer South West,2021,Couple with non-dependent children only,8046,,,8046,80068,10.048958385372433,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+123,Sydney - Outer South West,2021,One parent with dependent children,7424,600,1070,9094,80068,11.357845831043614,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+123,Sydney - Outer South West,2021,One parent with non-dependent children only,5268,,,5268,80068,6.579407503621922,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+123,Sydney - Outer South West,2021,Other family,1079,,,1079,80068,1.3476045361442774,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+124,Sydney - Outer West and Blue Mountains,2021,Couple without resident children,30798,,,30798,89750,34.31532033426184,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+124,Sydney - Outer West and Blue Mountains,2021,Couple with dependent children,27970,2227,2820,33017,89750,36.78774373259053,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+124,Sydney - Outer West and Blue Mountains,2021,Couple with non-dependent children only,8230,,,8230,89750,9.16991643454039,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+124,Sydney - Outer West and Blue Mountains,2021,One parent with dependent children,8200,595,1398,10193,89750,11.357103064066852,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+124,Sydney - Outer West and Blue Mountains,2021,One parent with non-dependent children only,6281,,,6281,89750,6.998328690807799,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+124,Sydney - Outer West and Blue Mountains,2021,Other family,1237,,,1237,89750,1.3782729805013927,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+125,Sydney - Parramatta,2021,Couple without resident children,39015,,,39015,124115,31.43455666116102,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+125,Sydney - Parramatta,2021,Couple with dependent children,44268,3314,5003,52585,124115,42.36796519357048,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+125,Sydney - Parramatta,2021,Couple with non-dependent children only,10981,,,10981,124115,8.847439874310115,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+125,Sydney - Parramatta,2021,One parent with dependent children,7521,947,2042,10510,124115,8.467953108004673,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+125,Sydney - Parramatta,2021,One parent with non-dependent children only,8217,,,8217,124115,6.6204729484752045,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+125,Sydney - Parramatta,2021,Other family,2797,,,2797,124115,2.253555170607904,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+126,Sydney - Ryde,2021,Couple without resident children,20484,,,20484,55344,37.01214223764094,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+126,Sydney - Ryde,2021,Couple with dependent children,18152,1476,3125,22753,55344,41.111954322058395,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+126,Sydney - Ryde,2021,Couple with non-dependent children only,4568,,,4568,55344,8.25383058687482,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+126,Sydney - Ryde,2021,One parent with dependent children,2548,301,1011,3860,55344,6.974559121133275,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+126,Sydney - Ryde,2021,One parent with non-dependent children only,2686,,,2686,55344,4.853281295172015,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+126,Sydney - Ryde,2021,Other family,1000,,,1000,55344,1.806880601329864,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+127,Sydney - South West,2021,Couple without resident children,30284,,,30284,122374,24.74708679948355,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+127,Sydney - South West,2021,Couple with dependent children,41132,4683,4761,50576,122374,41.329040482455426,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+127,Sydney - South West,2021,Couple with non-dependent children only,15233,,,15233,122374,12.447905600862928,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+127,Sydney - South West,2021,One parent with dependent children,10251,1389,2094,13734,122374,11.222972199977118,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+127,Sydney - South West,2021,One parent with non-dependent children only,10349,,,10349,122374,8.456861751679279,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+127,Sydney - South West,2021,Other family,2201,,,2201,122374,1.798584666677562,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+128,Sydney - Sutherland,2021,Couple without resident children,23653,,,23653,64570,36.631562645191266,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+128,Sydney - Sutherland,2021,Couple with dependent children,20481,2157,2800,25438,64570,39.39600433637913,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+128,Sydney - Sutherland,2021,Couple with non-dependent children only,6451,,,6451,64570,9.990707759021216,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+128,Sydney - Sutherland,2021,One parent with dependent children,3445,437,945,4827,64570,7.4756078674306945,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+128,Sydney - Sutherland,2021,One parent with non-dependent children only,3564,,,3564,64570,5.519591141396933,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+128,Sydney - Sutherland,2021,Other family,651,,,651,64570,1.0082081461979249,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+201,Ballarat,2021,Couple without resident children,19664,,,19664,46033,42.71718115265136,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+201,Ballarat,2021,Couple with dependent children,12312,765,1397,14474,46033,31.442660699932656,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+201,Ballarat,2021,Couple with non-dependent children only,3187,,,3187,46033,6.9232941585384395,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+201,Ballarat,2021,One parent with dependent children,4198,260,700,5158,46033,11.205005105033345,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+201,Ballarat,2021,One parent with non-dependent children only,2904,,,2904,46033,6.3085178024460715,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+201,Ballarat,2021,Other family,641,,,641,46033,1.3924793083222906,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+202,Bendigo,2021,Couple without resident children,19054,,,19054,44770,42.55974983247711,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+202,Bendigo,2021,Couple with dependent children,12208,810,1384,14402,44770,32.168863077953986,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+202,Bendigo,2021,Couple with non-dependent children only,3075,,,3075,44770,6.868438686620506,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+202,Bendigo,2021,One parent with dependent children,3981,243,661,4885,44770,10.911324547688183,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+202,Bendigo,2021,One parent with non-dependent children only,2690,,,2690,44770,6.008487826669645,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+202,Bendigo,2021,Other family,658,,,658,44770,1.4697341970069242,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+203,Geelong,2021,Couple without resident children,36084,,,36084,87654,41.16640427133959,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+203,Geelong,2021,Couple with dependent children,25842,1748,3105,30695,87654,35.01836767289571,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+203,Geelong,2021,Couple with non-dependent children only,6303,,,6303,87654,7.190772811280717,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+203,Geelong,2021,One parent with dependent children,6499,586,1351,8436,87654,9.624204257649394,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+203,Geelong,2021,One parent with non-dependent children only,4927,,,4927,87654,5.620964245784562,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+203,Geelong,2021,Other family,1198,,,1198,87654,1.366737399320054,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+204,Hume,2021,Couple without resident children,23193,,,23193,49743,46.625655871177855,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+204,Hume,2021,Couple with dependent children,12559,844,1332,14735,49743,29.622258408218244,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+204,Hume,2021,Couple with non-dependent children only,3444,,,3444,49743,6.923587238405404,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+204,Hume,2021,One parent with dependent children,3949,243,684,4876,49743,9.802384255071066,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+204,Hume,2021,One parent with non-dependent children only,2896,,,2896,49743,5.821924692921617,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+204,Hume,2021,Other family,596,,,596,49743,1.1981585348692279,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+205,Latrobe - Gippsland,2021,Couple without resident children,38074,,,38074,80813,47.11370695308923,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+205,Latrobe - Gippsland,2021,Couple with dependent children,19685,1275,2110,23070,80813,28.54738717780555,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+205,Latrobe - Gippsland,2021,Couple with non-dependent children only,5898,,,5898,80813,7.298330714117777,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+205,Latrobe - Gippsland,2021,One parent with dependent children,6648,429,1058,8135,80813,10.066449704874216,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+205,Latrobe - Gippsland,2021,One parent with non-dependent children only,4665,,,4665,80813,5.7725860938215385,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+205,Latrobe - Gippsland,2021,Other family,977,,,977,80813,1.2089639043223244,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+206,Melbourne - Inner,2021,Couple without resident children,74609,,,74609,143673,51.929729315877026,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+206,Melbourne - Inner,2021,Couple with dependent children,33674,2033,5356,41063,143673,28.580874625016527,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+206,Melbourne - Inner,2021,Couple with non-dependent children only,6137,,,6137,143673,4.271505432475134,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+206,Melbourne - Inner,2021,One parent with dependent children,7392,637,2839,10868,143673,7.564399713237699,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+206,Melbourne - Inner,2021,One parent with non-dependent children only,6369,,,6369,143673,4.432983232757721,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+206,Melbourne - Inner,2021,Other family,4634,,,4634,143673,3.2253798556444147,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+207,Melbourne - Inner East,2021,Couple without resident children,37070,,,37070,101146,36.64999110197141,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+207,Melbourne - Inner East,2021,Couple with dependent children,30015,3111,7261,40387,101146,39.929408973167504,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+207,Melbourne - Inner East,2021,Couple with non-dependent children only,8295,,,8295,101146,8.201016352599213,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+207,Melbourne - Inner East,2021,One parent with dependent children,5275,746,2604,8625,101146,8.527277400984715,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+207,Melbourne - Inner East,2021,One parent with non-dependent children only,4976,,,4976,101146,4.919621141715935,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+207,Melbourne - Inner East,2021,Other family,1797,,,1797,101146,1.776639708935598,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+208,Melbourne - Inner South,2021,Couple without resident children,42350,,,42350,114372,37.02829363830308,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+208,Melbourne - Inner South,2021,Couple with dependent children,36572,3122,7319,47013,114372,41.1053404679467,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+208,Melbourne - Inner South,2021,Couple with non-dependent children only,7956,,,7956,114372,6.956248032735285,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+208,Melbourne - Inner South,2021,One parent with dependent children,6242,764,2673,9679,114372,8.46273563459588,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+208,Melbourne - Inner South,2021,One parent with non-dependent children only,5760,,,5760,114372,5.036197670758577,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+208,Melbourne - Inner South,2021,Other family,1629,,,1629,114372,1.42429965376141,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+209,Melbourne - North East,2021,Couple without resident children,48673,,,48673,146944,33.123502831010455,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+209,Melbourne - North East,2021,Couple with dependent children,49396,4300,5999,59695,146944,40.62431946864111,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+209,Melbourne - North East,2021,Couple with non-dependent children only,13550,,,13550,146944,9.221199912891986,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+209,Melbourne - North East,2021,One parent with dependent children,9453,1210,2456,13119,146944,8.927890897212544,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+209,Melbourne - North East,2021,One parent with non-dependent children only,9521,,,9521,146944,6.479339067944251,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+209,Melbourne - North East,2021,Other family,2381,,,2381,146944,1.6203451655052263,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+210,Melbourne - North West,2021,Couple without resident children,34270,,,34270,112590,30.437871924682476,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+210,Melbourne - North West,2021,Couple with dependent children,40141,3565,4110,47816,112590,42.46913580246914,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+210,Melbourne - North West,2021,Couple with non-dependent children only,10670,,,10670,112590,9.476862954081179,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+210,Melbourne - North West,2021,One parent with dependent children,7597,1061,1648,10306,112590,9.153566036060042,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+210,Melbourne - North West,2021,One parent with non-dependent children only,7718,,,7718,112590,6.854960476063593,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+210,Melbourne - North West,2021,Other family,1815,,,1815,112590,1.6120436983746336,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+211,Melbourne - Outer East,2021,Couple without resident children,52235,,,52235,145449,35.91293168052032,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+211,Melbourne - Outer East,2021,Couple with dependent children,44841,4575,6613,56029,145449,38.52140612860865,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+211,Melbourne - Outer East,2021,Couple with non-dependent children only,14207,,,14207,145449,9.767684892986544,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+211,Melbourne - Outer East,2021,One parent with dependent children,8525,1231,2560,12316,145449,8.467572826213999,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+211,Melbourne - Outer East,2021,One parent with non-dependent children only,8891,,,8891,145449,6.112795550330357,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+211,Melbourne - Outer East,2021,Other family,1777,,,1777,145449,1.221734078611747,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+212,Melbourne - South East,2021,Couple without resident children,70370,,,70370,227579,30.92113068428985,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+212,Melbourne - South East,2021,Couple with dependent children,80462,6618,10306,97386,227579,42.792173267304975,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+212,Melbourne - South East,2021,Couple with non-dependent children only,20643,,,20643,227579,9.070696329626196,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+212,Melbourne - South East,2021,One parent with dependent children,15451,1938,3910,21299,227579,9.358947881834439,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+212,Melbourne - South East,2021,One parent with non-dependent children only,13933,,,13933,227579,6.122269629447357,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+212,Melbourne - South East,2021,Other family,3951,,,3951,227579,1.7361004310591048,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+213,Melbourne - West,2021,Couple without resident children,65659,,,65659,223211,29.41566499858878,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+213,Melbourne - West,2021,Couple with dependent children,84429,5547,8517,98493,223211,44.12551352755912,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+213,Melbourne - West,2021,Couple with non-dependent children only,17828,,,17828,223211,7.987061569546304,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+213,Melbourne - West,2021,One parent with dependent children,17846,1930,3625,23401,223211,10.483802321570174,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+213,Melbourne - West,2021,One parent with non-dependent children only,13659,,,13659,223211,6.119322076420965,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+213,Melbourne - West,2021,Other family,4162,,,4162,223211,1.864603446962739,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+214,Mornington Peninsula,2021,Couple without resident children,34237,,,34237,84216,40.65379500332478,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+214,Mornington Peninsula,2021,Couple with dependent children,23029,1825,2892,27746,84216,32.946233494822835,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+214,Mornington Peninsula,2021,Couple with non-dependent children only,6668,,,6668,84216,7.917735347202432,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+214,Mornington Peninsula,2021,One parent with dependent children,6780,639,1457,8876,84216,10.539564928279662,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+214,Mornington Peninsula,2021,One parent with non-dependent children only,5641,,,5641,84216,6.698252113612615,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+214,Mornington Peninsula,2021,Other family,1041,,,1041,84216,1.2361071530350527,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+215,North West,2021,Couple without resident children,18355,,,18355,40253,45.59908578242615,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+215,North West,2021,Couple with dependent children,10234,612,1026,11872,40253,29.49345390405684,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+215,North West,2021,Couple with non-dependent children only,2973,,,2973,40253,7.3857849104414575,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+215,North West,2021,One parent with dependent children,3444,184,460,4088,40253,10.155764787717686,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+215,North West,2021,One parent with non-dependent children only,2315,,,2315,40253,5.751124139815666,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+215,North West,2021,Other family,654,,,654,40253,1.6247236230839937,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+216,Shepparton,2021,Couple without resident children,15890,,,15890,36141,43.966686035250824,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+216,Shepparton,2021,Couple with dependent children,9388,698,927,11013,36141,30.472316759359174,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+216,Shepparton,2021,Couple with non-dependent children only,2796,,,2796,36141,7.736365900224122,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+216,Shepparton,2021,One parent with dependent children,3228,214,410,3852,36141,10.658255167261558,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+216,Shepparton,2021,One parent with non-dependent children only,2129,,,2129,36141,5.890816524169226,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+216,Shepparton,2021,Other family,462,,,462,36141,1.2783265543288787,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+217,Warrnambool and South West,2021,Couple without resident children,15754,,,15754,34182,46.08858463518811,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+217,Warrnambool and South West,2021,Couple with dependent children,8645,596,995,10236,34182,29.94558539582236,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+217,Warrnambool and South West,2021,Couple with non-dependent children only,2566,,,2566,34182,7.506874963431046,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+217,Warrnambool and South West,2021,One parent with dependent children,2578,177,397,3152,34182,9.221227546661986,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+217,Warrnambool and South West,2021,One parent with non-dependent children only,1958,,,1958,34182,5.728161020420104,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+217,Warrnambool and South West,2021,Other family,506,,,506,34182,1.480311274940027,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+301,Brisbane - East,2021,Couple without resident children,26695,,,26695,68482,38.98104611430741,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+301,Brisbane - East,2021,Couple with dependent children,20208,1545,2840,24593,68482,35.91162641278,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+301,Brisbane - East,2021,Couple with non-dependent children only,5636,,,5636,68482,8.229899827691948,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+301,Brisbane - East,2021,One parent with dependent children,5209,441,1081,6731,68482,9.828860138430537,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+301,Brisbane - East,2021,One parent with non-dependent children only,3959,,,3959,68482,5.7810811600128496,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+301,Brisbane - East,2021,Other family,863,,,863,68482,1.2601851581437458,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+302,Brisbane - North,2021,Couple without resident children,23459,,,23459,61242,38.305411319029425,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+302,Brisbane - North,2021,Couple with dependent children,19306,1229,2444,22979,61242,37.5216354789197,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+302,Brisbane - North,2021,Couple with non-dependent children only,3922,,,3922,61242,6.404101760229908,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+302,Brisbane - North,2021,One parent with dependent children,4554,372,1082,6008,61242,9.810260932040103,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+302,Brisbane - North,2021,One parent with non-dependent children only,3532,,,3532,61242,5.767283890140753,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+302,Brisbane - North,2021,Other family,1346,,,1346,61242,2.197838084974364,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+303,Brisbane - South,2021,Couple without resident children,35058,,,35058,97855,35.82647795207195,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+303,Brisbane - South,2021,Couple with dependent children,32908,2199,4440,39547,97855,40.41387767615349,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+303,Brisbane - South,2021,Couple with non-dependent children only,6922,,,6922,97855,7.0737315415666036,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+303,Brisbane - South,2021,One parent with dependent children,6652,643,1726,9021,97855,9.21874201624853,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+303,Brisbane - South,2021,One parent with non-dependent children only,5082,,,5082,97855,5.193398395585304,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+303,Brisbane - South,2021,Other family,2234,,,2234,97855,2.282969700066425,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+304,Brisbane - West,2021,Couple without resident children,18380,,,18380,51411,35.75110384937076,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+304,Brisbane - West,2021,Couple with dependent children,17736,1282,3083,22101,51411,42.98885452529614,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+304,Brisbane - West,2021,Couple with non-dependent children only,3501,,,3501,51411,6.809826690786018,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+304,Brisbane - West,2021,One parent with dependent children,3194,319,1044,4557,51411,8.86386181945498,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+304,Brisbane - West,2021,One parent with non-dependent children only,2054,,,2054,51411,3.9952539339829998,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+304,Brisbane - West,2021,Other family,815,,,815,51411,1.585263854039019,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+305,Brisbane Inner City,2021,Couple without resident children,33575,,,33575,70141,47.86786615531572,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+305,Brisbane Inner City,2021,Couple with dependent children,18981,1058,3333,23372,70141,33.32145250281576,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+305,Brisbane Inner City,2021,Couple with non-dependent children only,2832,,,2832,70141,4.037581443093198,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+305,Brisbane Inner City,2021,One parent with dependent children,4111,328,1479,5918,70141,8.437290600362129,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+305,Brisbane Inner City,2021,One parent with non-dependent children only,2458,,,2458,70141,3.5043697694643647,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+305,Brisbane Inner City,2021,Other family,1990,,,1990,70141,2.837142327597268,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+306,Cairns,2021,Couple without resident children,27598,,,27598,64841,42.56257614780771,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+306,Cairns,2021,Couple with dependent children,17355,845,1774,19974,64841,30.804583519686616,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+306,Cairns,2021,Couple with non-dependent children only,3956,,,3956,64841,6.101078021622121,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+306,Cairns,2021,One parent with dependent children,7095,326,998,8419,64841,12.984068721950617,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+306,Cairns,2021,One parent with non-dependent children only,3830,,,3830,64841,5.906756527505745,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+306,Cairns,2021,Other family,1060,,,1060,64841,1.6347681251060286,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+307,Darling Downs - Maranoa,2021,Couple without resident children,15257,,,15257,33422,45.64957213811262,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+307,Darling Downs - Maranoa,2021,Couple with dependent children,8917,443,810,10170,33422,30.429058703847765,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+307,Darling Downs - Maranoa,2021,Couple with non-dependent children only,2291,,,2291,33422,6.854766321584585,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+307,Darling Downs - Maranoa,2021,One parent with dependent children,3062,121,322,3505,33422,10.487104302555203,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+307,Darling Downs - Maranoa,2021,One parent with non-dependent children only,1722,,,1722,33422,5.1522948955777625,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+307,Darling Downs - Maranoa,2021,Other family,483,,,483,33422,1.4451558853449822,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+308,Central Queensland,2021,Couple without resident children,23896,,,23896,59070,40.453699001185036,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+308,Central Queensland,2021,Couple with dependent children,17850,887,1605,20342,59070,34.43710851532081,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+308,Central Queensland,2021,Couple with non-dependent children only,3876,,,3876,59070,6.561706449974607,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+308,Central Queensland,2021,One parent with dependent children,6078,254,682,7014,59070,11.874047739969527,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+308,Central Queensland,2021,One parent with non-dependent children only,3075,,,3075,59070,5.205688166582021,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+308,Central Queensland,2021,Other family,869,,,869,59070,1.4711359404096835,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+309,Gold Coast,2021,Couple without resident children,69597,,,69597,172410,40.367148077257696,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+309,Gold Coast,2021,Couple with dependent children,49070,3197,6207,58474,172410,33.915666144655184,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+309,Gold Coast,2021,Couple with non-dependent children only,12358,,,12358,172410,7.1677976915492145,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+309,Gold Coast,2021,One parent with dependent children,14818,1130,3041,18989,172410,11.01386230497071,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+309,Gold Coast,2021,One parent with non-dependent children only,10445,,,10445,172410,6.058233281132185,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+309,Gold Coast,2021,Other family,2552,,,2552,172410,1.4801925642364133,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+310,Ipswich,2021,Couple without resident children,32394,,,32394,96447,33.5873588603067,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+310,Ipswich,2021,Couple with dependent children,30833,1801,2917,35551,96447,36.86065922216347,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+310,Ipswich,2021,Couple with non-dependent children only,6997,,,6997,96447,7.254761682582143,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+310,Ipswich,2021,One parent with dependent children,11467,712,1435,13614,96447,14.115524588634173,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+310,Ipswich,2021,One parent with non-dependent children only,6267,,,6267,96447,6.497869296090081,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+310,Ipswich,2021,Other family,1623,,,1623,96447,1.6827895113378333,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+311,Logan - Beaudesert,2021,Couple without resident children,31338,,,31338,94435,33.18473023772965,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+311,Logan - Beaudesert,2021,Couple with dependent children,29694,1887,2672,34253,94435,36.271509503891565,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+311,Logan - Beaudesert,2021,Couple with non-dependent children only,7759,,,7759,94435,8.216233388044687,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+311,Logan - Beaudesert,2021,One parent with dependent children,11205,664,1329,13198,94435,13.975750516228095,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+311,Logan - Beaudesert,2021,One parent with non-dependent children only,6361,,,6361,94435,6.7358500555937955,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+311,Logan - Beaudesert,2021,Other family,1521,,,1521,94435,1.6106316514004342,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+312,Mackay - Isaac - Whitsunday,2021,Couple without resident children,18932,,,18932,45448,41.656398521387075,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+312,Mackay - Isaac - Whitsunday,2021,Couple with dependent children,14008,725,1174,15907,45448,35.000440063369126,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+312,Mackay - Isaac - Whitsunday,2021,Couple with non-dependent children only,3244,,,3244,45448,7.137827847209999,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+312,Mackay - Isaac - Whitsunday,2021,One parent with dependent children,4040,180,483,4703,45448,10.348090124977997,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+312,Mackay - Isaac - Whitsunday,2021,One parent with non-dependent children only,2048,,,2048,45448,4.5062488998415775,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+312,Mackay - Isaac - Whitsunday,2021,Other family,615,,,615,45448,1.3531948600598487,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+313,Moreton Bay - North,2021,Couple without resident children,30947,,,30947,72525,42.67080317132023,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+313,Moreton Bay - North,2021,Couple with dependent children,18059,1163,1806,21028,72525,28.994139951740777,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+313,Moreton Bay - North,2021,Couple with non-dependent children only,5605,,,5605,72525,7.728369527749051,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+313,Moreton Bay - North,2021,One parent with dependent children,7546,419,1107,9072,72525,12.50879007238883,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+313,Moreton Bay - North,2021,One parent with non-dependent children only,4882,,,4882,72525,6.7314719062392285,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+313,Moreton Bay - North,2021,Other family,991,,,991,72525,1.3664253705618752,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+314,Moreton Bay - South,2021,Couple without resident children,21171,,,21171,61656,34.33729077462048,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+314,Moreton Bay - South,2021,Couple with dependent children,21155,1487,2432,25074,61656,40.667574931880104,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+314,Moreton Bay - South,2021,Couple with non-dependent children only,4622,,,4622,61656,7.4964318152329055,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+314,Moreton Bay - South,2021,One parent with dependent children,5588,417,972,6977,61656,11.316011418191255,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+314,Moreton Bay - South,2021,One parent with non-dependent children only,3060,,,3060,61656,4.963020630595563,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+314,Moreton Bay - South,2021,Other family,746,,,746,61656,1.209939016478526,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+315,Queensland - Outback,2021,Couple without resident children,6606,,,6606,18193,36.31066893860276,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+315,Queensland - Outback,2021,Couple with dependent children,5809,216,332,6357,18193,34.942010663441984,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+315,Queensland - Outback,2021,Couple with non-dependent children only,1036,,,1036,18193,5.694497883801462,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+315,Queensland - Outback,2021,One parent with dependent children,2467,62,157,2686,18193,14.763920189083713,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+315,Queensland - Outback,2021,One parent with non-dependent children only,1079,,,1079,18193,5.930852525696697,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+315,Queensland - Outback,2021,Other family,424,,,424,18193,2.330566701478591,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+316,Sunshine Coast,2021,Couple without resident children,51023,,,51023,111501,45.76012771185909,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+316,Sunshine Coast,2021,Couple with dependent children,29476,1857,3603,34936,111501,31.332454417449167,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+316,Sunshine Coast,2021,Couple with non-dependent children only,7568,,,7568,111501,6.787383072797554,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+316,Sunshine Coast,2021,One parent with dependent children,8470,587,1738,10795,111501,9.681527519932557,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+316,Sunshine Coast,2021,One parent with non-dependent children only,6003,,,6003,111501,5.3838082169666635,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+316,Sunshine Coast,2021,Other family,1171,,,1171,111501,1.050214796279854,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+317,Toowoomba,2021,Couple without resident children,17861,,,17861,42730,41.79967236133864,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+317,Toowoomba,2021,Couple with dependent children,12361,650,1251,14262,42730,33.377018488181605,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+317,Toowoomba,2021,Couple with non-dependent children only,2687,,,2687,42730,6.288322021998597,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+317,Toowoomba,2021,One parent with dependent children,4141,245,549,4935,42730,11.549262813011936,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+317,Toowoomba,2021,One parent with non-dependent children only,2303,,,2303,42730,5.38965597940557,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+317,Toowoomba,2021,Other family,685,,,685,42730,1.6030891645214134,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+318,Townsville,2021,Couple without resident children,24899,,,24899,60417,41.21191055497625,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+318,Townsville,2021,Couple with dependent children,16737,887,1837,19461,60417,32.21113262823378,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+318,Townsville,2021,Couple with non-dependent children only,3949,,,3949,60417,6.536239800056276,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+318,Townsville,2021,One parent with dependent children,6432,352,871,7655,60417,12.670274922621116,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+318,Townsville,2021,One parent with non-dependent children only,3386,,,3386,60417,5.604382872370359,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+318,Townsville,2021,Other family,1071,,,1071,60417,1.7726798748696557,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+319,Wide Bay,2021,Couple without resident children,42372,,,42372,84422,50.190708583070766,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+319,Wide Bay,2021,Couple with dependent children,17596,936,1816,20348,84422,24.102722039278863,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+319,Wide Bay,2021,Couple with non-dependent children only,5835,,,5835,84422,6.911705479614319,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+319,Wide Bay,2021,One parent with dependent children,8037,343,986,9366,84422,11.09426452820355,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+319,Wide Bay,2021,One parent with non-dependent children only,5317,,,5317,84422,6.298121342777948,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+319,Wide Bay,2021,Other family,1171,,,1171,84422,1.3870791973656156,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+401,Adelaide - Central and Hills,2021,Couple without resident children,34773,,,34773,83532,41.62835799454101,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+401,Adelaide - Central and Hills,2021,Couple with dependent children,24123,1995,4442,30560,83532,36.58478187999808,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+401,Adelaide - Central and Hills,2021,Couple with non-dependent children only,5991,,,5991,83532,7.172101709524494,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+401,Adelaide - Central and Hills,2021,One parent with dependent children,4800,518,1664,6982,83532,8.358473399415793,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+401,Adelaide - Central and Hills,2021,One parent with non-dependent children only,3904,,,3904,83532,4.673657999329598,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+401,Adelaide - Central and Hills,2021,Other family,1312,,,1312,83532,1.5706555571517504,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+402,Adelaide - North,2021,Couple without resident children,42573,,,42573,122254,34.8234004613346,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+402,Adelaide - North,2021,Couple with dependent children,36521,2683,3923,43127,122254,35.27655536833151,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+402,Adelaide - North,2021,Couple with non-dependent children only,9937,,,9937,122254,8.128159405827212,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+402,Adelaide - North,2021,One parent with dependent children,12382,1030,2130,15542,122254,12.71287647029954,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+402,Adelaide - North,2021,One parent with non-dependent children only,8950,,,8950,122254,7.320823858524056,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+402,Adelaide - North,2021,Other family,2135,,,2135,122254,1.7463641271451242,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+403,Adelaide - South,2021,Couple without resident children,42066,,,42066,104269,40.34372632326003,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+403,Adelaide - South,2021,Couple with dependent children,28657,2440,4040,35137,104269,33.6984146774209,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+403,Adelaide - South,2021,Couple with non-dependent children only,8338,,,8338,104269,7.996624116467982,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+403,Adelaide - South,2021,One parent with dependent children,8196,731,1844,10771,104269,10.330011796411204,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+403,Adelaide - South,2021,One parent with non-dependent children only,6461,,,6461,104269,6.196472585332169,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+403,Adelaide - South,2021,Other family,1506,,,1506,104269,1.4443410793236724,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+404,Adelaide - West,2021,Couple without resident children,25700,,,25700,65084,39.48743162682072,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+404,Adelaide - West,2021,Couple with dependent children,17310,1552,2444,21306,65084,32.73615635179153,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+404,Adelaide - West,2021,Couple with non-dependent children only,5255,,,5255,65084,8.074181058324626,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+404,Adelaide - West,2021,One parent with dependent children,4624,485,1182,6291,65084,9.66597013090775,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+404,Adelaide - West,2021,One parent with non-dependent children only,4989,,,4989,65084,7.665478458607339,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+404,Adelaide - West,2021,Other family,1545,,,1545,65084,2.373855325425604,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+405,Barossa - Yorke - Mid North,2021,Couple without resident children,15706,,,15706,31339,50.11646829828648,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+405,Barossa - Yorke - Mid North,2021,Couple with dependent children,7384,455,745,8584,31339,27.390791027154666,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+405,Barossa - Yorke - Mid North,2021,Couple with non-dependent children only,2277,,,2277,31339,7.265707265707267,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+405,Barossa - Yorke - Mid North,2021,One parent with dependent children,2335,140,360,2835,31339,9.046236318963592,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+405,Barossa - Yorke - Mid North,2021,One parent with non-dependent children only,1582,,,1582,31339,5.048023229841412,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+405,Barossa - Yorke - Mid North,2021,Other family,340,,,340,31339,1.0849101758192667,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+406,South Australia - Outback,2021,Couple without resident children,9198,,,9198,20780,44.26371511068335,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+406,South Australia - Outback,2021,Couple with dependent children,5634,225,457,6316,20780,30.394610202117423,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+406,South Australia - Outback,2021,Couple with non-dependent children only,1281,,,1281,20780,6.1645813282001924,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+406,South Australia - Outback,2021,One parent with dependent children,2155,73,250,2478,20780,11.92492781520693,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+406,South Australia - Outback,2021,One parent with non-dependent children only,1171,,,1171,20780,5.635226179018287,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+406,South Australia - Outback,2021,Other family,332,,,332,20780,1.5976900866217516,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+407,South Australia - South East,2021,Couple without resident children,26615,,,26615,52505,50.69041043710123,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+407,South Australia - South East,2021,Couple with dependent children,12063,755,1212,14030,52505,26.721264641462717,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+407,South Australia - South East,2021,Couple with non-dependent children only,3588,,,3588,52505,6.833634891915056,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+407,South Australia - South East,2021,One parent with dependent children,4027,260,597,4884,52505,9.301971240834206,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+407,South Australia - South East,2021,One parent with non-dependent children only,2755,,,2755,52505,5.247119321969336,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+407,South Australia - South East,2021,Other family,647,,,647,52505,1.2322635939434339,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+501,Bunbury,2021,Couple without resident children,22712,,,22712,50858,44.65767430885996,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+501,Bunbury,2021,Couple with dependent children,14599,813,1314,16726,50858,32.88764796098942,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+501,Bunbury,2021,Couple with non-dependent children only,3308,,,3308,50858,6.504384757560267,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+501,Bunbury,2021,One parent with dependent children,4352,235,592,5179,50858,10.183255338393172,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+501,Bunbury,2021,One parent with non-dependent children only,2419,,,2419,50858,4.756380510440835,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+501,Bunbury,2021,Other family,519,,,519,50858,1.0204884187345158,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+502,Mandurah,2021,Couple without resident children,13868,,,13868,29933,46.33013730665152,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+502,Mandurah,2021,Couple with dependent children,7248,481,847,8576,29933,28.650653125313198,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+502,Mandurah,2021,Couple with non-dependent children only,2077,,,2077,29933,6.93883005378679,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+502,Mandurah,2021,One parent with dependent children,2852,165,387,3404,29933,11.372064276885045,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+502,Mandurah,2021,One parent with non-dependent children only,1660,,,1660,29933,5.545718771923964,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+502,Mandurah,2021,Other family,349,,,349,29933,1.1659372598803996,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+503,Perth - Inner,2021,Couple without resident children,20459,,,20459,45456,45.008359732488564,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+503,Perth - Inner,2021,Couple with dependent children,13520,954,2590,17064,45456,37.53959873284055,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+503,Perth - Inner,2021,Couple with non-dependent children only,2230,,,2230,45456,4.905843013023583,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+503,Perth - Inner,2021,One parent with dependent children,2249,201,893,3343,45456,7.354364660330869,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+503,Perth - Inner,2021,One parent with non-dependent children only,1567,,,1567,45456,3.447289686730025,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+503,Perth - Inner,2021,Other family,793,,,793,45456,1.7445441745864134,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+504,Perth - North East,2021,Couple without resident children,27357,,,27357,74985,36.48329665933186,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+504,Perth - North East,2021,Couple with dependent children,23934,1728,2580,28242,74985,37.66353270654131,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+504,Perth - North East,2021,Couple with non-dependent children only,5995,,,5995,74985,7.994932319797293,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+504,Perth - North East,2021,One parent with dependent children,6128,521,1078,7727,74985,10.304727612189104,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+504,Perth - North East,2021,One parent with non-dependent children only,4410,,,4410,74985,5.881176235247049,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+504,Perth - North East,2021,Other family,1247,,,1247,74985,1.6629992665199707,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+505,Perth - North West,2021,Couple without resident children,57730,,,57730,159412,36.21433769101448,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+505,Perth - North West,2021,Couple with dependent children,51434,4163,6673,62270,159412,39.06230396707902,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+505,Perth - North West,2021,Couple with non-dependent children only,13033,,,13033,159412,8.175670589416104,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+505,Perth - North West,2021,One parent with dependent children,11938,1158,2553,15649,159412,9.816701377562541,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+505,Perth - North West,2021,One parent with non-dependent children only,8466,,,8466,159412,5.310767068978496,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+505,Perth - North West,2021,Other family,2259,,,2259,159412,1.41708277921361,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+506,Perth - South East,2021,Couple without resident children,50463,,,50463,139783,36.10095648254795,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+506,Perth - South East,2021,Couple with dependent children,46854,3213,5212,55279,139783,39.54629675997797,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+506,Perth - South East,2021,Couple with non-dependent children only,10398,,,10398,139783,7.438672799982831,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+506,Perth - South East,2021,One parent with dependent children,10359,941,1944,13244,139783,9.474685762932546,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+506,Perth - South East,2021,One parent with non-dependent children only,7538,,,7538,139783,5.39264431297082,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+506,Perth - South East,2021,Other family,2856,,,2856,139783,2.043166908708498,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+507,Perth - South West,2021,Couple without resident children,44251,,,44251,120558,36.7051543655336,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+507,Perth - South West,2021,Couple with dependent children,38708,2847,4670,46225,120558,38.34254051991572,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+507,Perth - South West,2021,Couple with non-dependent children only,9321,,,9321,120558,7.731548300403126,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+507,Perth - South West,2021,One parent with dependent children,9995,852,1792,12639,120558,10.483750559896482,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+507,Perth - South West,2021,One parent with non-dependent children only,6444,,,6444,120558,5.345145075399393,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+507,Perth - South West,2021,Other family,1671,,,1671,120558,1.3860548449708854,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+509,Western Australia - Wheat Belt,2021,Couple without resident children,17399,,,17399,35380,49.177501413227816,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+509,Western Australia - Wheat Belt,2021,Couple with dependent children,9190,467,828,10485,35380,29.63538722442058,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+509,Western Australia - Wheat Belt,2021,Couple with non-dependent children only,2387,,,2387,35380,6.7467495760316565,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+509,Western Australia - Wheat Belt,2021,One parent with dependent children,2546,126,341,3013,35380,8.516110797060486,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+509,Western Australia - Wheat Belt,2021,One parent with non-dependent children only,1694,,,1694,35380,4.788015828151497,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+509,Western Australia - Wheat Belt,2021,Other family,400,,,400,35380,1.1305822498586773,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+510,Western Australia - Outback (North),2021,Couple without resident children,6087,,,6087,18373,33.13013661350895,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+510,Western Australia - Outback (North),2021,Couple with dependent children,7448,152,330,7930,18373,43.161160398410715,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+510,Western Australia - Outback (North),2021,Couple with non-dependent children only,848,,,848,18373,4.615468350296631,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+510,Western Australia - Outback (North),2021,One parent with dependent children,2103,52,167,2322,18373,12.638110270505635,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+510,Western Australia - Outback (North),2021,One parent with non-dependent children only,802,,,802,18373,4.365100963370163,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+510,Western Australia - Outback (North),2021,Other family,384,,,384,18373,2.0900234039079084,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+511,Western Australia - Outback (South),2021,Couple without resident children,12164,,,12164,28400,42.83098591549296,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+511,Western Australia - Outback (South),2021,Couple with dependent children,8461,360,616,9437,28400,33.228873239436616,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+511,Western Australia - Outback (South),2021,Couple with non-dependent children only,1833,,,1833,28400,6.454225352112676,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+511,Western Australia - Outback (South),2021,One parent with dependent children,2642,127,293,3062,28400,10.781690140845072,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+511,Western Australia - Outback (South),2021,One parent with non-dependent children only,1462,,,1462,28400,5.147887323943662,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+511,Western Australia - Outback (South),2021,Other family,452,,,452,28400,1.591549295774648,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+601,Hobart,2021,Couple without resident children,27505,,,27505,66185,41.55775477827302,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+601,Hobart,2021,Couple with dependent children,17868,1154,2070,21092,66185,31.868248092468082,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+601,Hobart,2021,Couple with non-dependent children only,4593,,,4593,66185,6.939638890987383,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+601,Hobart,2021,One parent with dependent children,6279,432,1169,7880,66185,11.906021001737555,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+601,Hobart,2021,One parent with non-dependent children only,4067,,,4067,66185,6.144896879957694,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+601,Hobart,2021,Other family,1052,,,1052,66185,1.589484022059379,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+602,Launceston and North East,2021,Couple without resident children,18716,,,18716,41009,45.63876222292668,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+602,Launceston and North East,2021,Couple with dependent children,10096,608,1122,11826,41009,28.837572240239943,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+602,Launceston and North East,2021,Couple with non-dependent children only,2926,,,2926,41009,7.13501914213953,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+602,Launceston and North East,2021,One parent with dependent children,3759,220,603,4582,41009,11.173157111853497,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+602,Launceston and North East,2021,One parent with non-dependent children only,2413,,,2413,41009,5.884074227608574,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+602,Launceston and North East,2021,Other family,545,,,545,41009,1.3289765661196322,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+603,South East,2021,Couple without resident children,5899,,,5899,11559,51.033826455575735,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+603,South East,2021,Couple with dependent children,2631,173,262,3066,11559,26.524785881131585,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+603,South East,2021,Couple with non-dependent children only,902,,,902,11559,7.803443204429448,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+603,South East,2021,One parent with dependent children,795,44,137,976,11559,8.443636992819448,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+603,South East,2021,One parent with non-dependent children only,583,,,583,11559,5.043688900423912,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+603,South East,2021,Other family,125,,,125,11559,1.081408426334458,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+604,West and North West,2021,Couple without resident children,14900,,,14900,31823,46.82148131854319,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+604,West and North West,2021,Couple with dependent children,7537,468,799,8804,31823,27.665524934795588,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+604,West and North West,2021,Couple with non-dependent children only,2238,,,2238,31823,7.032649341671118,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+604,West and North West,2021,One parent with dependent children,2983,176,442,3601,31823,11.31571504886403,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+604,West and North West,2021,One parent with non-dependent children only,1894,,,1894,31823,5.951670175659114,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+604,West and North West,2021,Other family,400,,,400,31823,1.2569525186186092,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+701,Darwin,2021,Couple without resident children,12828,,,12828,34687,36.98215469772537,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+701,Darwin,2021,Couple with dependent children,11974,500,978,13452,34687,38.78109954738086,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+701,Darwin,2021,Couple with non-dependent children only,2212,,,2212,34687,6.37702885807363,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+701,Darwin,2021,One parent with dependent children,3278,177,430,3885,34687,11.200161443768557,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+701,Darwin,2021,One parent with non-dependent children only,1725,,,1725,34687,4.973044656499553,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+701,Darwin,2021,Other family,578,,,578,34687,1.6663303254821693,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+702,Northern Territory - Outback,2021,Couple without resident children,6120,,,6120,19823,30.87322806840539,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+702,Northern Territory - Outback,2021,Couple with dependent children,7141,157,301,7599,19823,38.33425818493669,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+702,Northern Territory - Outback,2021,Couple with non-dependent children only,1100,,,1100,19823,5.549109620138223,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+702,Northern Territory - Outback,2021,One parent with dependent children,2937,66,161,3164,19823,15.961257125561218,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+702,Northern Territory - Outback,2021,One parent with non-dependent children only,1299,,,1299,19823,6.55299399687232,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+702,Northern Territory - Outback,2021,Other family,539,,,539,19823,2.7190637138677296,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F
+801,Australian Capital Territory,2021,Couple without resident children,47064,,,47064,119752,39.30122252655488,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_children_F
+801,Australian Capital Territory,2021,Couple with dependent children,39629,2380,4816,46825,119752,39.10164339635246,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+801,Australian Capital Territory,2021,Couple with non-dependent children only,7448,,,7448,119752,6.219520342040216,CEN_SA4,2021Census_G29_AUST_SA4.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+801,Australian Capital Territory,2021,One parent with dependent children,8451,715,1893,11059,119752,9.234918832253323,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+801,Australian Capital Territory,2021,One parent with non-dependent children only,5582,,,5582,119752,4.661300020041419,CEN_SA4,2021Census_G29_AUST_SA4.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+801,Australian Capital Territory,2021,Other family,1773,,,1773,119752,1.4805598236355135,CEN_SA4,2021Census_G29_AUST_SA4.csv: Other_family_F

@@ -1,0 +1,19 @@
+year,family_type,source_count_1,source_count_2,source_count_3,families_count,all_families_count,share_pct,source_id,source_fields
+2011,Couple without resident children,2150299,,,2150299,5684062,37.83032275158153,CEN2011,2011Census_B25_AUST_short.csv: CF_no_children_F
+2011,Couple with dependent children,1743161,131492,211616,2086269,5684062,36.70383961329063,CEN2011,2011Census_B25_AUST_short.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+2011,Couple with non-dependent children only,448133,,,448133,5684062,7.884027303009714,CEN2011,2011Census_B25_AUST_short.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+2011,One parent with dependent children,472848,36115,91929,600892,5684062,10.57152437816477,CEN2011,2011Census_B25_AUST_short.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+2011,One parent with non-dependent children only,300748,,,300748,5684062,5.29107529087473,CEN2011,2011Census_B25_AUST_short.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+2011,Other family,97721,,,97721,5684062,1.7192106630786224,CEN2011,2011Census_B25_AUST_short.csv: Other_family_F
+2016,Couple without resident children,2291987,,,2291987,6070316,37.75729303054404,CEN2016,2016Census_G25_AUS.csv: CF_no_children_F
+2016,Couple with dependent children,1860086,141998,232283,2234367,6070316,36.80808379662607,CEN2016,2016Census_G25_AUS.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+2016,Couple with non-dependent children only,481864,,,481864,6070316,7.938038151555866,CEN2016,2016Census_G25_AUS.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+2016,One parent with dependent children,475321,41236,100850,617407,6070316,10.170920261811741,CEN2016,2016Census_G25_AUS.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+2016,One parent with non-dependent children only,342140,,,342140,6070316,5.636279890536176,CEN2016,2016Census_G25_AUS.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+2016,Other family,102559,,,102559,6070316,1.6895166577819014,CEN2016,2016Census_G25_AUS.csv: Other_family_F
+2021,Couple without resident children,2608834,,,2608834,6730187,38.76317255374925,CEN2021,2021Census_G29_AUS_AUS.csv: CF_no_children_F
+2021,Couple with dependent children,2026712,147153,250815,2424680,6730187,36.02693357554552,CEN2021,2021Census_G29_AUS_AUS.csv: CF_ChU15_a_Total_F + CF_no_ChU15_a_DSs_a_NdCh_F + CF_no_ChU15_a_DSs_a_no_NdCh_F
+2021,Couple with non-dependent children only,519457,,,519457,6730187,7.718314513400594,CEN2021,2021Census_G29_AUS_AUS.csv: CF_no_ChU15_a_no_DSs_a_NdCh_F
+2021,One parent with dependent children,523571,43766,106722,674059,6730187,10.015457222808221,CEN2021,2021Census_G29_AUS_AUS.csv: OPF_ChU15_a_Total_F + OPF_no_ChU15_a_DSs_a_NdCh_F + OPF_no_ChU15_a_DSs_no_NdCh_F
+2021,One parent with non-dependent children only,394202,,,394202,6730187,5.857222095017567,CEN2021,2021Census_G29_AUS_AUS.csv: OPF_no_ChU15_no_DSs_a_NdCh_F
+2021,Other family,108941,,,108941,6730187,1.618692021484693,CEN2021,2021Census_G29_AUS_AUS.csv: Other_family_F

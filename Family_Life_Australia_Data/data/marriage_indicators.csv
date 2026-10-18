@@ -1,0 +1,6 @@
+year,median_male_marriage_age_years,median_female_marriage_age_years,median_years_to_separation,median_years_to_divorce,source_id
+2021,32.1,30.5,8.4,12.2,ABS_MARRIAGES
+2022,32.5,30.9,8.9,12.8,ABS_MARRIAGES
+2023,32.9,31.2,9,13,ABS_MARRIAGES
+2024,32.8,31.2,9.3,13.2,ABS_MARRIAGES
+2025,32.7,31.2,9.4,13.4,ABS_MARRIAGES

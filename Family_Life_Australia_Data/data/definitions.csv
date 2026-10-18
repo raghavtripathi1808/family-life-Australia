@@ -1,0 +1,20 @@
+field_or_concept,meaning_and_unit,use
+Fields ending _pct,Percentage points on a 0-100 scale,"49.9 means 49.9%, not 0.499. Do not sum percentages across categories, sexes or years."
+Fields ending _pp,Percentage-point change,A change from 40% to 50% is +10 percentage points.
+Fields ending _count,"Number of people, births or families named in the field",Count the stated population only. People and families are not interchangeable.
+total_fertility_rate,"Period total fertility, births per woman",Synthetic measure based on the current annual age-specific rates. Not completed family size.
+completed_children_per_woman,Completed cohort fertility,Average lifetime births to a birth cohort by age 49.
+tfr_3yr_average,Three-year average of annual total fertility rates,The year is the end of the three-year averaging period.
+births_per_1000_women,Age-specific fertility rate,"Live births per 1,000 women in that age group."
+median_mother_age_years,Median age at all registered births,Not age at first birth.
+Registered marital status,Legal marriage status,Can differ from whether a person lives with a partner.
+Social marital status,Current co-resident partnership arrangement,"Registered marriage, de facto partnership or not partnered."
+Dependent children,"Under 15, or dependent full-time students aged 15-24",Family classification concerns co-resident children.
+Non-dependent children only,Resident children with no dependent children in the family,Includes age 25+ and age 15-24 who are not full-time students.
+Couple without resident children,Couple family without children living in the household,May include couples before parenthood or after children have left.
+sa4_code_2021,Three-digit text key for 2021 ASGS SA4,"Join by exact code to matching 2021 boundary data, never by approximate name."
+Blank numeric value,"Unavailable, suppressed or not applicable as documented",Never replace with zero. SA4 tfr_status distinguishes np.
+People vs Male/Female; People vs Men/Women,Alternative totals and subgroups,Choose a total OR its component sex groups to avoid double-counting.
+Census snapshots,Different populations observed at different dates,"Same-age comparison across years describes cohorts, not tracked individual journeys."
+HILDA reported changes,Changes calculated by the publisher from unrounded estimates,Can differ slightly from subtracting rounded endpoint percentages.
+Census random adjustments,ABS confidentiality protection,Related categories may not add exactly to the separately adjusted total.
