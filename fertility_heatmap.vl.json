@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Age-specific fertility rates in Australia, 1924–2024. Darker teal indicates more registered births per 1,000 women in the age group. An optional gold guide traces the age group with the highest rate each year. Ages 30–34 first led in 2000 and continued to lead through 2024. These are annual period rates for all births, not first-birth ages or individual life histories.",
+  "width": "container",
+  "height": 322,
+  "autosize": {"type": "fit-x", "contains": "padding", "resize": true},
+  "padding": {"top": 30, "right": 18, "bottom": 8, "left": 8},
+  "background": "#fffefa",
+  "data": {
+    "url": "Family_Life_Australia_Data/data/fertility_age.csv",
+    "format": {"type": "csv", "parse": {"year": "number", "births_per_1000_women": "number"}}
+  },
+  "params": [{"name": "showPeak", "value": true}],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "sort": "ascending",
+      "scale": {"paddingInner": 0, "paddingOuter": 0.03},
+      "axis": {
+        "title": "Year of birth registration",
+        "values": [1924, 1944, 1964, 1984, 2004, 2024],
+        "labelAngle": 0,
+        "labelOverlap": false,
+        "labelPadding": 10,
+        "titlePadding": 14,
+        "format": "d"
+      }
+    },
+    "y": {
+      "field": "age_group",
+      "type": "ordinal",
+      "sort": ["15-19", "20-24", "25-29", "30-34", "35-39", "40-44", "45-49"],
+      "scale": {"paddingInner": 0.045, "paddingOuter": 0.02},
+      "axis": {
+        "title": "Mother’s age",
+        "labelExpr": "replace(datum.label, '-', '–')",
+        "labelPadding": 10,
+        "titlePadding": 16,
+        "ticks": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "params": [{"name": "cellHover", "select": {"type": "point", "fields": ["year", "age_group"], "on": "pointerover", "clear": "pointerout"}}],
+      "mark": {"type": "rect"},
+      "encoding": {
+        "color": {
+          "field": "births_per_1000_women",
+          "type": "quantitative",
+          "scale": {"domain": [0, 62.5, 125, 187.5, 250], "range": ["#f0f5ed", "#bdd9cb", "#77b3a3", "#337f77", "#123f45"]},
+          "legend": {
+            "title": ["Births per 1,000", "women in age group"],
+            "titleLimit": 240,
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": {"expr": "min(200, max(100, width - 16))"},
+            "gradientThickness": 11,
+            "values": [0, 50, 100, 150, 200, 250],
+            "offset": 20,
+            "titlePadding": 8
+          }
+        },
+        "stroke": {"condition": {"param": "cellHover", "empty": false, "value": "#122f35"}, "value": "transparent"},
+        "strokeWidth": {"condition": {"param": "cellHover", "empty": false, "value": 1.5}, "value": 0},
+        "tooltip": [
+          {"field": "year", "type": "quantitative", "title": "Registration year", "format": "d"},
+          {"field": "age_group", "type": "nominal", "title": "Mother’s age"},
+          {"field": "births_per_1000_women", "type": "quantitative", "title": "Births per 1,000 women", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"joinaggregate": [{"op": "max", "field": "births_per_1000_women", "as": "year_max"}], "groupby": ["year"]},
+        {"filter": "showPeak && datum.births_per_1000_women === datum.year_max"}
+      ],
+      "mark": {"type": "line", "interpolate": "step-after", "stroke": "#fffefa", "strokeWidth": 5, "opacity": 0.95, "tooltip": false, "aria": false},
+      "encoding": {"order": {"field": "year", "type": "quantitative"}}
+    },
+    {
+      "transform": [
+        {"joinaggregate": [{"op": "max", "field": "births_per_1000_women", "as": "year_max"}], "groupby": ["year"]},
+        {"filter": "showPeak && datum.births_per_1000_women === datum.year_max"}
+      ],
+      "mark": {"type": "line", "interpolate": "step-after", "stroke": "#ad6819", "strokeWidth": 2.3, "tooltip": false, "aria": false},
+      "encoding": {"order": {"field": "year", "type": "quantitative"}}
+    },
+    {
+      "data": {"values": [{"year": 2000}]},
+      "mark": {"type": "rule", "color": "#4b6764", "strokeDash": [3, 4], "strokeWidth": 1, "tooltip": false, "aria": false},
+      "encoding": {"y": {"value": 0}, "y2": {"value": {"expr": "height"}}}
+    },
+    {
+      "data": {"values": [{"year": 2000}]},
+      "mark": {"type": "text", "text": "2000: ages 30–34 take the lead", "align": "right", "baseline": "bottom", "dx": -6, "dy": -9, "fontSize": 11, "fontWeight": "bold", "color": "#365852", "tooltip": false},
+      "encoding": {"y": {"value": 0}}
+    }
+  ],
+  "config": {
+    "font": "Arial",
+    "view": {"stroke": null},
+    "axis": {"domain": false, "grid": false, "labelColor": "#415b58", "labelFontSize": 12, "titleColor": "#415b58", "titleFontSize": 12, "titleFontWeight": "normal", "tickColor": "#c5d1c9", "tickSize": 4},
+    "legend": {"labelColor": "#415b58", "labelFontSize": 11, "titleColor": "#415b58", "titleFontSize": 12, "titleFontWeight": "normal"}
+  }
+}

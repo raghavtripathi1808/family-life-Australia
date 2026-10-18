@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore how the timing and structure of Australian family life have changed. Age-specific fertility rates reveal a shift towards childbirth in the thirties.">
+  <title>Family Life in Australia | Raghav Tripathi</title>
+  <style>
+    :root { --paper: #f6f5ee; --surface: #fffefa; --ink: #163b3d; --muted: #526863; --line: #d7ded3; --accent: #ad6819; --teal: #226b64; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.6; }
+    a { color: var(--teal); text-underline-offset: 3px; }
+    a:hover { color: var(--ink); }
+    a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .skip { position: absolute; top: -100px; left: 20px; background: var(--surface); padding: 10px 16px; z-index: 20; }
+    .skip:focus { top: 10px; }
+    .wrap { width: min(1080px, calc(100% - 64px)); margin-inline: auto; }
+    .masthead { padding: 22px 0 17px; display: flex; gap: 18px; justify-content: space-between; border-bottom: 1px solid var(--line); font-size: 11px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; }
+    .masthead span:last-child { color: var(--muted); text-align: right; }
+    .intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: end; padding: 45px 0 40px; border-bottom: 1px solid var(--line); }
+    .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; margin: 0 0 12px; color: var(--teal); }
+    h1, h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; letter-spacing: -1.5px; line-height: 1.07; margin: 0; }
+    h1 { font-size: clamp(42px, 5.8vw, 68px); }
+    .intro p:last-child { color: var(--muted); margin: 0 0 4px; max-width: 42ch; font-size: 17px; line-height: 1.65; }
+    .chapter { padding: 37px 0 0; }
+    .chapter-heading { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: end; margin-bottom: 23px; }
+    h2 { font-size: clamp(30px, 3.5vw, 41px); max-width: 21ch; letter-spacing: -0.8px; }
+    .chapter-heading > p { max-width: 46ch; margin: 0; color: var(--muted); font-size: 15px; }
+    .chart-panel { margin: 0; background: var(--surface); border: 1px solid var(--line); padding: 23px 24px 18px; }
+    .chart-toolbar { display: flex; gap: 14px; justify-content: space-between; align-items: start; margin-bottom: 8px; }
+    .chart-toolbar h3 { margin: 0; font-size: 15px; font-weight: 700; }
+    .chart-toolbar p { margin: 3px 0 0; color: var(--muted); font-size: 12px; }
+    .toggle { display: flex; gap: 8px; align-items: start; color: var(--muted); font-size: 12px; max-width: 235px; line-height: 1.5; cursor: pointer; }
+    .toggle input { width: 16px; height: 16px; margin-top: 2px; flex: 0 0 auto; accent-color: var(--accent); }
+    #fertility-heatmap { width: 100%; min-width: 0; min-height: 440px; }
+    #fertility-heatmap .vega-embed { width: 100%; padding: 0; }
+    #fertility-heatmap svg { display: block; max-width: 100%; height: auto; }
+    .loading { color: var(--muted); font-size: 14px; margin: 0; }
+    .error { color: #773f1d; background: #f8eddc; padding: 14px; font-size: 14px; }
+    figcaption { color: var(--muted); font-size: 12px; line-height: 1.6; border-top: 1px solid var(--line); padding-top: 12px; }
+    .gold-key { display: inline-block; width: 20px; height: 3px; background: var(--accent); margin: 0 4px 3px 0; }
+    .findings { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; padding: 24px 0 20px; }
+    .finding { border-top: 2px solid var(--line); padding-top: 13px; }
+    .finding:first-child { border-color: var(--accent); }
+    .finding .stat { display: block; font-family: Georgia, 'Times New Roman', serif; font-size: 34px; line-height: 1.2; margin-bottom: 6px; }
+    .finding h3 { margin: 0 0 5px; font-size: 14px; }
+    .finding p { margin: 0; max-width: 33ch; color: var(--muted); font-size: 13px; }
+    .method-note { margin: 0 0 22px; color: var(--muted); max-width: 90ch; font-size: 12px; }
+    .values { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 13px 0; }
+    summary { cursor: pointer; font-size: 13px; font-weight: 700; }
+    .values-controls { margin: 15px 0 12px; display: flex; align-items: center; gap: 12px; font-size: 13px; }
+    select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid #9baea4; padding: 5px 9px; border-radius: 0; }
+    table { border-collapse: collapse; width: min(100%, 520px); font-size: 13px; margin-bottom: 10px; }
+    th, td { text-align: left; padding: 7px 12px; border-bottom: 1px solid var(--line); }
+    th:last-child, td:last-child { text-align: right; }
+    thead { background: #e8eee4; }
+    .source { margin: 19px 0 0; color: var(--muted); font-size: 12px; max-width: 100ch; }
+    .page-footer { margin-top: 30px; padding: 20px 0 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+    .footer-line { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+    .page-footer summary { font-size: 11px; font-weight: 400; }
+    .page-footer details p { max-width: 95ch; margin-bottom: 0; }
+    [hidden] { display: none !important; }
+    @media (max-width: 760px) {
+      .wrap { width: calc(100% - 36px); }
+      .intro { grid-template-columns: 1fr; gap: 20px; padding: 30px 0; }
+      .intro p:last-child { max-width: 55ch; font-size: 16px; }
+      .chapter-heading { grid-template-columns: 1fr; gap: 15px; }
+      .chapter-heading > p { max-width: 65ch; }
+      .chart-panel { padding: 18px 14px 15px; }
+      .chart-toolbar { flex-direction: column; gap: 12px; margin-bottom: 15px; }
+      .toggle { max-width: none; }
+      .findings { gap: 20px; }
+      .finding .stat { font-size: 30px; }
+    }
+    @media (max-width: 500px) {
+      .wrap { width: calc(100% - 24px); }
+      .masthead { font-size: 9px; letter-spacing: 1px; gap: 8px; }
+      .chapter { padding-top: 27px; }
+      .chart-panel { padding-inline: 8px; }
+      .findings { grid-template-columns: 1fr; gap: 18px; padding-block: 20px; }
+      .finding p { max-width: 60ch; }
+      .footer-line { flex-direction: column; gap: 5px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+  </style>
+  <script defer src="https://cdn.jsdelivr.net/npm/vega@6.4.0/build/vega.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/vega-lite@6.5.0/build/vega-lite.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0/build/vega-embed.min.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the visualisation</a>
+  <div class="wrap">
+    <header class="masthead"><span>Family life in Australia</span><span>Raghav Tripathi · FIT3179</span></header>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">A changing society</p><h1 id="page-title">Family life,<br>on a different timetable.</h1></div>
+      <p>How have the timing and structure of Australian family life changed across generations? We begin with the changing age pattern of childbirth.</p>
+    </section>
+    <main id="main">
+      <section class="chapter" aria-labelledby="chapter-title">
+        <div class="chapter-heading">
+          <div><p class="eyebrow">01 / Timing of parenthood</p><h2 id="chapter-title">Childbirth has shifted into the thirties.</h2></div>
+          <p>Since 2000, women aged <strong>30–34</strong> have had the highest birth rate. Between 1994 and 2024, rates fell in the early twenties while rising in the late thirties.</p>
+        </div>
+        <figure class="chart-panel" aria-labelledby="chart-title" aria-describedby="chart-caption">
+          <div class="chart-toolbar">
+            <div><h3 id="chart-title">A century of changing birth rates</h3><p>Australia · 1924–2024 · annual rates within each age group</p></div>
+            <label class="toggle"><input id="peak-toggle" type="checkbox" checked disabled><span>Trace the highest-rate age group <span aria-hidden="true">—</span> gold line</span></label>
+          </div>
+          <p class="loading" id="chart-loading" role="status">Loading the birth-rate heatmap…</p>
+          <p class="error" id="chart-error" role="alert" hidden>The chart could not load. Please refresh the page. The 2024 values are also available in the table below.</p>
+          <div id="fertility-heatmap"></div>
+          <figcaption id="chart-caption">Each column is one year; each row is a mother’s age group. <strong>Darker teal means a higher birth rate.</strong> <span class="gold-key" aria-hidden="true"></span>The gold guide follows the highest-rate age group each year. Hover over a cell for its value.</figcaption>
+        </figure>
+        <div class="findings" aria-label="Three changes to notice">
+          <article class="finding"><span class="stat">2000</span><h3>The leading age group changes</h3><p>Ages 30–34 overtook ages 25–29 and continued to lead in every year through 2024.</p></article>
+          <article class="finding"><span class="stat">−56%</span><h3>A lower rate at ages 20–24</h3><p>From 69.9 to 30.6 births per 1,000 women between 1994 and 2024.</p></article>
+          <article class="finding"><span class="stat">+62%</span><h3>A higher rate at ages 35–39</h3><p>From 41.2 to 66.6 births per 1,000 women over the same thirty years.</p></article>
+        </div>
+        <p class="method-note">Rates cover all registered births, including subsequent births. They describe the population in each year, rather than tracking the same women or measuring age at first birth. Percentage changes compare 1994 with 2024 and are rounded to whole numbers.</p>
+        <details class="values">
+          <summary>Read the values for a year</summary>
+          <div class="values-controls"><label for="values-year">Registration year</label><select id="values-year" disabled><option value="2024">2024</option></select></div>
+          <table aria-label="Age-specific fertility rates"><thead><tr><th scope="col">Mother’s age</th><th scope="col">Births per 1,000 women</th></tr></thead><tbody id="values-body"><tr><th scope="row">15–19</th><td>6.0</td></tr><tr><th scope="row">20–24</th><td>30.6</td></tr><tr><th scope="row">25–29</th><td>71.3</td></tr><tr><th scope="row">30–34</th><td>106.0</td></tr><tr><th scope="row">35–39</th><td>66.6</td></tr><tr><th scope="row">40–44</th><td>15.5</td></tr><tr><th scope="row">45–49</th><td>1.4</td></tr></tbody></table>
+        </details>
+        <p class="source"><strong>Source:</strong> Australian Bureau of Statistics, <a href="https://www.abs.gov.au/statistics/people/population/births-australia/2024">Births, Australia, 2024</a>, national age-specific fertility tables. Registration year can differ from birth year; ABS includes births below age 15 and above age 49 in the youngest and oldest groups respectively. <a href="Family_Life_Australia_Data/data/fertility_age.csv">Chart data (CSV)</a> · <a href="fertility_heatmap.vl.json">Chart specification (JSON)</a> · <a href="Family_Life_Australia_Data/data/sources.csv">Source register</a>.</p>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="footer-line"><span>Created by Raghav Tripathi · 19 October 2026</span><a href="https://github.com/raghavtripathi1808/family-life-Australia">Project repository</a></div>
+      <details><summary>AI assistance acknowledgement</summary><p>OpenAI ChatGPT/Codex assisted with finding and extracting published data, restructuring tables into CSV files, calculating derived measures, drafting explanatory text, and generating and checking Vega-Lite and webpage code. Original data sources are credited separately; AI-generated statistics were not used.</p></details>
+    </footer>
+  </div>
+  <script>
+    // The data folder matches the existing repository upload, including its outer folder.
+    const DATA_URL = 'Family_Life_Australia_Data/data/fertility_age.csv';
+    document.addEventListener('DOMContentLoaded', async () => {
+      const loading = document.getElementById('chart-loading');
+      const error = document.getElementById('chart-error');
+      const toggle = document.getElementById('peak-toggle');
+      const yearSelect = document.getElementById('values-year');
+      let result;
+      let observer;
+      try {
+        if (!window.vega || !window.vegaEmbed) throw new Error('Chart libraries unavailable');
+        const responses = await Promise.all([fetch('fertility_heatmap.vl.json'), fetch(DATA_URL)]);
+        if (responses.some(response => !response.ok)) throw new Error('Chart or data file unavailable');
+        const spec = await responses[0].json();
+        const csvText = await responses[1].text();
+        const rows = vega.read(csvText, {type: 'csv', parse: {year: 'number', age_min: 'number', births_per_1000_women: 'number'}});
+        if (!rows.length) throw new Error('Birth-rate data is empty');
+        const years = [...new Set(rows.map(row => row.year))].sort((a, b) => b - a);
+        yearSelect.replaceChildren(...years.map(year => new Option(String(year), String(year))));
+        yearSelect.value = '2024';
+        function updateTable() {
+          const body = document.getElementById('values-body');
+          const selectedRows = rows.filter(row => row.year === Number(yearSelect.value)).sort((a, b) => a.age_min - b.age_min);
+          const tableRows = selectedRows.map(row => {
+            const tr = document.createElement('tr');
+            const th = document.createElement('th');
+            th.scope = 'row';
+            th.textContent = row.age_group.replace('-', '–');
+            const td = document.createElement('td');
+            td.textContent = Number(row.births_per_1000_women).toFixed(1);
+            tr.append(th, td);
+            return tr;
+          });
+          body.replaceChildren(...tableRows);
+          body.closest('table').setAttribute('aria-label', `Age-specific fertility rates, ${yearSelect.value}`);
+        }
+        updateTable();
+        yearSelect.disabled = false;
+        yearSelect.addEventListener('change', updateTable);
+        // Reuse the downloaded CSV; the standalone JSON retains its real data URL.
+        spec.data = {values: rows};
+        if (window.innerWidth < 500) {
+          spec.height = 294;
+          spec.layer[4].mark.text = '2000: ages 30–34 lead';
+          spec.config.axis.labelFontSize = 10;
+          spec.encoding.x.axis.values = [1924, 1964, 2004, 2024];
+          spec.layer[0].encoding.color.legend.values = [0, 125, 250];
+          spec.layer[0].encoding.color.legend.labelOverlap = false;
+        }
+        result = await vegaEmbed('#fertility-heatmap', spec, {renderer: 'svg', actions: false, tooltip: true});
+        loading.hidden = true;
+        toggle.disabled = false;
+        toggle.addEventListener('change', () => result.view.signal('showPeak', toggle.checked).runAsync().catch(showError));
+        let lastWidth = 0;
+        let frame;
+        const container = document.getElementById('fertility-heatmap');
+        observer = new ResizeObserver(entries => {
+          const currentWidth = Math.round(entries[0].contentRect.width);
+          if (currentWidth === lastWidth) return;
+          lastWidth = currentWidth;
+          cancelAnimationFrame(frame);
+          frame = requestAnimationFrame(() => result.view.resize().runAsync().catch(showError));
+        });
+        observer.observe(container);
+        window.addEventListener('pagehide', () => {
+          observer.disconnect();
+          cancelAnimationFrame(frame);
+          result.view.finalize();
+        }, {once: true});
+      } catch (problem) { showError(problem); }
+      function showError(problem) {
+        loading.hidden = true;
+        error.hidden = false;
+        console.error('Unable to display the fertility heatmap:', problem);
+      }
+    });
+  </script>
+</body>
+</html>
