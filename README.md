@@ -1,6 +1,7 @@
 # Family Life in Australia
 
-An interactive data visualisation project by Raghav Tripathi for FIT3179 Data Visualisation 2.
+An interactive data visualisation project for FIT3179 Data Visualisation 2.
+By - Raghav Tripathi
 
 **Research question: How have the timing and structure of Australian family life changed across generations?**
 
@@ -55,11 +56,7 @@ The site uses HTML, CSS and JavaScript with Vega, Vega-Lite and Vega-Embed. GitH
 
 ## AI acknowledgement
 
-OpenAI ChatGPT/Codex generated the initial HTML, CSS, JavaScript, Vega/Vega-Lite specifications, layout and draft explanatory text. It also assisted with source retrieval, extraction, cleaning, restructuring, derived calculations, geographic preparation and checking. The underlying statistical observations come from the published ABS and HILDA sources listed above.
-
-Raghav Tripathi directed the revised light editorial style, interactive scrolling approach, parent-age opening and first-section layout. Codex implemented those choices.
-
-Decorative AI-generated silhouettes accompany selected headings. They are illustrative artwork, separate from the statistical charts. The fertility profiles use separated baselines and always-available point tooltips. The population dot-density map keeps the actual regional boundaries and uses one illustrative dot per approximately 25,000 residents.
+ChatGPT by OpenAI assisted with the HTML, CSS, JavaScript, Vega/Vega-Lite text. It also assisted with source retrieval, generating images and restructuring of data. The underlying statistical observations come from the published ABS and HILDA sources listed above.
 
 ## Typography
 
