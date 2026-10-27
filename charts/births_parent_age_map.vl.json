@@ -16,7 +16,7 @@
     "bottom": 8
   },
   "config": {
-    "font": "Arial",
+    "font": "Source Sans 3",
     "view": {
       "stroke": null
     },
@@ -24,7 +24,7 @@
       "domain": false,
       "gridColor": "#e4e8df",
       "labelColor": "#526863",
-      "labelFontSize": 11,
+      "labelFontSize": 12,
       "titleColor": "#526863",
       "titleFontSize": 12,
       "titleFontWeight": "normal",
@@ -34,7 +34,7 @@
     },
     "legend": {
       "labelColor": "#526863",
-      "labelFontSize": 11,
+      "labelFontSize": 12,
       "titleColor": "#526863",
       "titleFontSize": 12,
       "titleFontWeight": "normal",
@@ -141,8 +141,8 @@
               2.2
             ],
             "range": [
-              "#cce2d1",
-              "#185b59"
+              "#e9deed",
+              "#70436f"
             ]
           },
           "legend": {

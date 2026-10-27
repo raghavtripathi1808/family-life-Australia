@@ -1,7 +1,9 @@
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:200 800;font-display:swap;src:url('assets/fonts/Newsreader-latin.woff') format('woff')}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:200 900;font-display:swap;src:url('assets/fonts/SourceSans3-variable.ttf') format('truetype')}
 :root{--paper:#f6f5ee;--surface:#fffefa;--ink:#163b3d;--muted:#526863;--line:#d7ded3;--accent:#ad6819;--teal:#226b64}
 *{box-sizing:border-box}
 html{scroll-padding-top:90px}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Arial,Helvetica,sans-serif}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 'Source Sans 3',Arial,sans-serif}
 a{color:var(--teal);text-underline-offset:3px}
 a:hover{color:var(--ink)}
 a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
@@ -13,7 +15,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 .masthead>span{color:var(--muted);text-align:right}
 .intro{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:end;padding:42px 0 37px}
 .eyebrow{font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin:0 0 12px;color:var(--teal)}
-h1,h2,.chart-heading h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.8px;line-height:1.12;margin:0}
+h1,h2,.chart-heading h3{font-family:'Newsreader',Georgia,serif;font-weight:400;letter-spacing:-.8px;line-height:1.12;margin:0}
 h1{font-size:clamp(42px,5.5vw,65px);letter-spacing:-1.5px}
 .research-question{font-size:18px;line-height:1.65;margin:0 0 14px;max-width:43ch}
 .intro-detail{font-size:14px;color:var(--muted);margin:0;max-width:53ch}
@@ -60,7 +62,7 @@ button:hover{background:#e8eee3}
 .findings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:27px;padding:20px 0 15px}
 .findings article{border-top:2px solid var(--line);padding-top:12px}
 .findings article:first-child{border-color:var(--accent)}
-.findings strong{display:block;font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:33px;line-height:1.2;margin-bottom:7px}
+.findings strong{display:block;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:33px;line-height:1.2;margin-bottom:7px}
 .findings h4{font-size:13px;line-height:1.5;margin:0 0 5px}
 .findings p{font-size:12px;color:var(--muted);margin:0;max-width:34ch}
 .values{border-block:1px solid var(--line);padding:11px 0;margin-top:5px}
@@ -102,3 +104,138 @@ thead{background:#e8eee4}
 @media(max-width:760px){.wrap{width:calc(100% - 36px)}.intro,.chapter-heading{grid-template-columns:1fr;gap:20px}.intro{padding:30px 0}.intro-detail,.research-question,.chapter-heading>p{max-width:65ch}.research-question{font-size:16px;margin-bottom:10px}.chapter-heading>p{font-size:14px}.chapter{padding-top:33px}.chapter-nav>.wrap{gap:10px;flex-wrap:wrap;padding-block:10px}.chapter-nav a{font-size:11px}.chart-heading{flex-direction:column;gap:12px}.toggle{max-width:none;padding:0}.findings{gap:18px}.region-summary dl{grid-template-columns:repeat(2,minmax(0,1fr))}.region-controls select{max-width:100%}.source-grid{grid-template-columns:1fr;gap:0}.chart-host[data-chart="population-map"]{min-height:400px}}
 @media(max-width:500px){.wrap{width:calc(100% - 24px)}.masthead{font-size:9px;letter-spacing:1px;gap:8px}.chapter-nav a span{display:none}.chapter-nav a{font-size:10px}.chart-grid{gap:27px}.chart-heading h3{font-size:24px}.chart-panel{padding:12px 7px}.findings{grid-template-columns:1fr;gap:16px}.findings p{max-width:60ch}.chart-note{font-size:12px}.family-key{grid-template-columns:1fr}.footer-line{flex-direction:column;gap:5px}.chart-host{min-height:calc(var(--chart-height) + 40px)}.chart-host[data-chart="fertility-map"],.chart-host[data-chart="births-map"]{min-height:300px}.chart-host[data-chart="population-map"]{min-height:330px}.closing h2{font-size:28px}.region-summary{padding:10px}.region-summary dd{font-size:14px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+/* Light editorial presentation and the two scroll-linked opening scenes. */
+:root{--ink:#193747;--paper:#f8f7f1;--surface:#fffefa;--nav-height:50px;--mother:#9c5c7e;--father:#576e9d}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-height) + 25px)}
+.wrap{width:min(1180px,calc(100% - 72px))}
+.intro{grid-template-columns:1.3fr 1fr;gap:72px;padding:48px 0 44px}
+h1{font-size:clamp(54px,7.7vw,92px);line-height:1.02;letter-spacing:-2.7px}
+.intro .research-question{font-size:19px;line-height:1.6;max-width:34ch}
+.intro-detail{max-width:43ch;font-size:14px}
+.masthead{letter-spacing:1.5px}
+.chapter-nav{z-index:20;background:rgba(248,247,241,.97)}
+.chapter-nav>.wrap{align-items:center;padding-block:12px}
+.chapter-nav a{position:relative;padding-block:3px}
+.chapter-nav a.is-current:after{content:"";position:absolute;bottom:-9px;left:0;right:0;height:2px;background:var(--teal)}
+.motion-toggle{font-size:10px;padding:5px 9px;white-space:nowrap;border-color:var(--line);background:transparent}
+.reading-progress{height:2px;position:absolute;bottom:-1px;left:0;right:0;background:transparent;overflow:hidden}
+.reading-progress span{display:block;width:100%;height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;will-change:transform}
+html.motion-paused{scroll-behavior:auto}
+.region-controls .control{min-width:0;max-width:100%}
+.opening-scene{padding-top:26px;margin-bottom:72px}
+.hero-chart .chart-heading{align-items:center;margin-bottom:10px}
+.hero-chart .chart-heading h3{font-size:clamp(28px,3vw,37px);max-width:34ch}
+.hero-chart .chart-kicker{font-size:10px;letter-spacing:1.5px;margin-bottom:9px}
+.hero-chart .chart-subtitle{margin-top:8px;font-size:12px}
+.hero-year-readout{display:flex;align-items:center;gap:15px;flex-shrink:0}
+.hero-year-readout>span{font-size:10px;line-height:1.5;color:var(--muted);max-width:5ch;text-transform:uppercase;letter-spacing:1px}
+.hero-year-readout output{font:52px/1 'Newsreader',Georgia,serif;letter-spacing:-2px;color:var(--ink);font-variant-numeric:tabular-nums}
+.parent-controls{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:13px 0 12px;font-size:11px;color:var(--muted)}
+.year-slider{display:flex;align-items:center;gap:12px;flex:1 1 340px;max-width:650px}
+.year-slider>span:first-child{white-space:nowrap}
+.year-slider input{flex:1;min-width:80px;width:100%;accent-color:var(--teal);cursor:ew-resize}
+.range-ends{font-size:10px;font-variant-numeric:tabular-nums}
+.follow-scroll{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.follow-scroll input{accent-color:var(--teal);width:14px;height:14px}
+.follow-scroll:has(input:disabled){opacity:.55}
+.parent-controls button{font-size:10px;padding:5px 9px}
+.hero-chart .chart-panel{padding:10px 18px 8px}
+.hero-chart .chart-host{min-height:380px}
+.hero-chart figcaption{font-size:10px;margin-top:4px;padding-top:7px;line-height:1.5}
+.parent-age-readout{display:flex;align-items:center;gap:48px;margin:12px 0 6px;padding:0 0 12px;border-bottom:1px solid var(--line)}
+.parent-age-readout dt{font-size:10px;color:var(--muted);line-height:1.5;margin:0 0 3px}
+.parent-age-readout dd{font:31px/1.1 'Newsreader',Georgia,serif;margin:0;font-variant-numeric:tabular-nums;display:flex;gap:7px;align-items:baseline}
+.parent-age-readout dd small{font:10px 'Source Sans 3',Arial,sans-serif;color:var(--muted)}
+.line-key{display:inline-block;width:20px;height:3px;vertical-align:middle;margin-right:7px}
+.mother-age .line-key{background:var(--mother)}
+.father-age .line-key{background:var(--father)}
+.mother-age dd{color:var(--mother)}
+.father-age dd{color:var(--father)}
+.parent-age-readout .opening-takeaway{margin-left:auto}
+.opening-takeaway dd{font-size:20px;line-height:1.15;letter-spacing:-.3px;color:var(--ink)}
+.hero-chart .chart-note{font-size:11px;line-height:1.5;margin:9px 0 5px;max-width:110ch}
+.hero-chart .chart-source{font-size:10px}
+.continue-link{display:flex;align-items:center;justify-content:space-between;border-block:1px solid var(--line);padding:15px 0;text-decoration:none;font-size:12px;font-weight:700;margin-top:30px}
+.continue-link span{font-size:23px;font-weight:400}
+#parenthood .chapter-heading{margin-bottom:38px}
+#heading-parenthood{max-width:19ch;font-size:clamp(34px,4.3vw,50px)}
+.fertility-story{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(245px,1fr);gap:48px;align-items:start}
+.fertility-sticky .chart-heading{margin-bottom:10px}
+.fertility-sticky .chart-heading h3{font-size:29px}
+.fertility-sticky .chart-heading .chart-subtitle{font-size:11px}
+.fertility-sticky .toggle{font-size:10px;max-width:none;margin:0 0 10px;padding:0;align-items:center}
+.fertility-sticky .toggle input{width:14px;height:14px;margin:0}
+.fertility-sticky .chart-panel{padding:12px 8px 10px}
+.fertility-sticky .chart-host[data-chart="fertility"]{min-height:380px}
+.fertility-sticky figcaption{font-size:10px}
+.fertility-sticky .chart-source{margin-top:9px;font-size:10px}
+.story-chart-controls{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0 12px}
+.story-year-buttons{display:flex;gap:5px}
+.story-year-buttons button{font-size:11px;padding:5px 9px;border-color:var(--line);font-variant-numeric:tabular-nums}
+.story-year-buttons button[aria-pressed="true"]{background:var(--teal);color:var(--surface);border-color:var(--teal)}
+#story-year-status{font-size:10px;color:var(--muted);margin:0}
+.story-steps{padding-top:2px}
+.story-step{min-height:64svh;display:flex;flex-direction:column;justify-content:center;border-left:2px solid var(--line);padding:30px 0 30px 25px;scroll-margin-top:calc(var(--nav-height) + 40px)}
+.story-step.is-active{border-color:var(--accent)}
+.story-step .step-number{font-size:10px;letter-spacing:1.1px;text-transform:uppercase;font-weight:700;color:var(--muted);margin:0 0 9px}
+.story-step.is-active .step-number{color:#895219}
+.story-step .step-year{font:64px/1 'Newsreader',Georgia,serif;font-variant-numeric:tabular-nums;letter-spacing:-2px;color:var(--teal);margin:0 0 18px}
+.story-step h3{font:29px/1.2 'Newsreader',Georgia,serif;letter-spacing:-.55px;margin:0 0 17px;max-width:19ch}
+.story-step>p:not(.step-number):not(.step-year){font-size:14px;line-height:1.8;max-width:35ch;margin:0 0 14px}
+.story-step p.step-reading{color:var(--muted);font-size:11px!important;line-height:1.7!important;margin-bottom:0!important}
+.fertility-extra{padding-top:20px;margin-bottom:45px}
+.fertility-extra .findings{padding-top:12px}
+.scroll-reveal{opacity:1;transform:none}
+.motion-enabled .scroll-reveal{transition:opacity .55s ease,transform .55s ease}
+.motion-enabled .scroll-reveal:not(.is-visible){opacity:0;transform:translateY(24px)}
+@media(min-width:900px) and (min-height:720px){
+ .motion-enabled .opening-track{min-height:190svh}
+ .motion-enabled .opening-sticky{position:sticky;top:calc(var(--nav-height) + 18px)}
+ .fertility-sticky{position:sticky;top:calc(var(--nav-height) + 24px)}
+}
+@media(max-width:1050px){.fertility-story{grid-template-columns:minmax(0,1.7fr) minmax(230px,1fr);gap:30px}.fertility-sticky .chart-heading h3{font-size:26px}.story-step{padding-left:20px}.story-step h3{font-size:26px}.hero-year-readout output{font-size:44px}}
+@media(max-width:899px),(max-height:719px){.fertility-story{grid-template-columns:minmax(0,1fr);gap:28px}.story-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.story-step{min-height:0;padding:16px 0 18px 20px}.story-step h3{max-width:28ch}.story-step>p:not(.step-number):not(.step-year){max-width:55ch}.fertility-sticky .chart-host[data-chart="fertility"]{min-height:350px}.opening-scene{margin-bottom:40px}.hero-chart .chart-host{min-height:320px}}
+@media(max-width:760px){.wrap{width:calc(100% - 36px)}.intro{grid-template-columns:1fr;gap:22px;padding:34px 0}h1{font-size:clamp(58px,12vw,84px);letter-spacing:-2px}.intro .research-question{font-size:17px;max-width:49ch}.intro-detail{max-width:58ch}.hero-chart .chart-heading{flex-direction:row;align-items:center}.hero-chart .chart-heading h3{font-size:29px}.hero-year-readout{flex-direction:column;gap:4px;align-items:end}.hero-year-readout>span{max-width:none;font-size:8px}.hero-year-readout output{font-size:39px}.parent-age-readout{gap:35px}.parent-age-readout .opening-takeaway dd{font-size:17px}.parent-controls{gap:10px}.year-slider{max-width:none;flex-basis:100%}.chapter-nav>.wrap{gap:8px;flex-wrap:nowrap}.chapter-nav a{font-size:10px}.chapter-nav a span{display:none}.motion-toggle{font-size:9px;padding:4px 6px}.hero-chart .chart-panel{padding-inline:8px}.story-step .step-year{font-size:50px}.continue-link{font-size:11px}}
+@media(max-width:500px){.wrap{width:calc(100% - 28px)}.masthead{font-size:8px}.intro{padding:30px 0}.intro .research-question{font-size:16px}.chapter-nav>.wrap{gap:7px}.chapter-nav a{font-size:9px}.motion-toggle{font-size:8px;padding:4px}.hero-chart .chart-heading h3{font-size:25px}.hero-chart .chart-subtitle{font-size:10px;max-width:28ch}.hero-chart .chart-kicker{font-size:8px;letter-spacing:.8px}.hero-year-readout output{font-size:33px}.hero-year-readout>span{font-size:7px}.parent-age-readout .opening-takeaway{display:none}.parent-age-readout{gap:50px}.parent-age-readout dd{font-size:29px}.hero-chart .chart-note{font-size:10px}.hero-chart .chart-source{font-size:9px}.story-steps{grid-template-columns:1fr;gap:20px}.story-step{padding:15px 0 18px 18px}.story-step .step-year{font-size:48px;margin-bottom:12px}.story-step h3{font-size:26px;max-width:30ch}.story-step>p:not(.step-number):not(.step-year){font-size:13px;max-width:60ch}.story-chart-controls{gap:8px}.story-year-buttons button{padding:5px 10px}.fertility-sticky .chart-heading h3{font-size:26px}.fertility-extra{margin-bottom:32px}.opening-scene{padding-top:22px}.continue-link{line-height:1.6;gap:15px}.hero-chart .chart-host{min-height:280px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}html:not(.motion-enabled) .scroll-reveal{opacity:1!important;transform:none!important;transition:none!important}html:not(.motion-enabled) .opening-track{min-height:0!important}html:not(.motion-enabled) .opening-sticky{position:static!important}}
+
+/* Decorative silhouettes sit behind editorial text, outside data panels. */
+.intro,.chapter-heading{position:relative;isolation:isolate}
+.intro>div,.chapter-heading>div,.chapter-heading>p{position:relative;z-index:1}
+.people-shadow{position:absolute;pointer-events:none;user-select:none;object-fit:contain;z-index:0;filter:grayscale(1)}
+.hero-people{width:650px;height:290px;left:30px;bottom:15px;opacity:.105;object-position:left bottom}
+.section-people{width:340px;height:190px;right:10px;bottom:-18px;opacity:.075;object-position:right bottom}
+#partnership .section-people{width:240px;height:210px;right:34px;bottom:-18px;opacity:.085}
+.hero-chart .chart-heading{margin-bottom:14px}
+@media(max-width:760px){.hero-people{width:100%;max-width:570px;height:310px;left:0;top:5px;bottom:auto;opacity:.085}.section-people{width:230px;height:155px;right:0;opacity:.065}#partnership .section-people{width:170px;height:170px;right:0;opacity:.065}}
+@media(max-width:500px){.hero-people{height:235px;top:12px;opacity:.085}.section-people{width:190px;height:145px}}
+
+/* Author-only image handles are enabled by artwork-editor.html. */
+.artwork-editing .people-shadow{pointer-events:auto;cursor:move;touch-action:none;z-index:30}
+.artwork-editing .people-shadow.artwork-selected{filter:grayscale(1)}
+.artwork-editing .artwork-selection-box{position:absolute;box-sizing:border-box;border:1.5px dashed #226b64;pointer-events:none;z-index:31}
+.artwork-resize-handle{position:absolute;right:-8px;bottom:-8px;width:16px;height:16px;padding:0;border:2px solid #fffefa;background:#226b64;cursor:nwse-resize;pointer-events:auto;touch-action:none}
+.artwork-editing .opening-track{min-height:0!important}
+.artwork-editing .opening-sticky{position:static!important}
+.artwork-editing .scroll-reveal{opacity:1!important;transform:none!important;transition:none!important}
+
+/* Readable supporting text and consistent editorial emphasis. */
+body{font-size:17px}
+h1,h2,.chart-heading h3,.story-step h3{font-optical-sizing:auto}
+.research-question strong,.chart-note strong{color:var(--ink);font-weight:650}
+.chart-subtitle,.control-note,.chart-source,.hero-chart .chart-source,.fertility-sticky .chart-source{font-size:12px}
+figcaption,.hero-chart figcaption,.fertility-sticky figcaption{font-size:12px;line-height:1.6;max-width:95ch}
+.chart-note,.hero-chart .chart-note{font-size:14px;line-height:1.7;max-width:78ch}
+.closing>p:not(.eyebrow){max-width:78ch;font-size:15px}
+.family-key,.significance{font-size:12px}
+.source-grid p,.sources>p,.sources li{font-size:13px}
+.page-footer{font-size:12px}.page-footer summary{font-size:12px}
+.page-footer details p{max-width:85ch}
+@media(max-width:500px){.chart-note,.hero-chart .chart-note{font-size:13px}.chart-subtitle,.hero-chart .chart-subtitle,.chart-source,.hero-chart .chart-source{font-size:11px}}
+
+/* Keep author-positioned decorative art inside the viewport at narrow widths. */
+main.wrap{overflow-x:clip}
+
+/* Chapter anchors use the page scroll padding once. */
+.chapter,.chart-block{scroll-margin-top:0}

@@ -1,0 +1,14 @@
+{
+  "purpose": "Decorative artwork only; these illustrations encode no statistical observations.",
+  "generation": "OpenAI built-in image generation",
+  "assets": [
+    {
+      "file": "assets/family-silhouettes.png",
+      "prompt": "Use case: illustration-story. Asset type: decorative background artwork for a light cream editorial data-visualisation website about Family Life in Australia. Create a graceful, understated group of five full-body human silhouettes: adults of different ages, one older adult, a teenager and a small child, standing or walking together naturally. Wide horizontal composition with generous breathing room and every head, hand and foot entirely within the frame. Single muted grey-green colour, clean softly defined edges, believable human proportions and natural clothing outlines, no facial details. It will be placed at very low opacity behind a large headline, so prioritise a recognisable human silhouette, not an icon or infographic. Genuinely transparent background. No words, numbers, logos, scenery, floor, decorative shapes, frames, gradients or watermark."
+    },
+    {
+      "file": "assets/couple-silhouettes.png",
+      "prompt": "Use case: illustration-story. Asset type: subtle decorative background artwork for section headings on the same light cream editorial family-life data website. Two full-body adult human silhouettes walking side by side in a relaxed natural pose, one slightly taller than the other, with a little space between their outlines. Single muted grey-green colour, understated photographic silhouette illustration, clean softly defined edges, believable human proportions and natural clothing outlines, no facial details. All limbs and both heads fully inside the image, ample transparent space around them. Designed to sit at low opacity behind section headings. Genuinely transparent background. No words, numbers, logos, scenery, floor, decorative shapes, frames, gradients or watermark."
+    }
+  ]
+}

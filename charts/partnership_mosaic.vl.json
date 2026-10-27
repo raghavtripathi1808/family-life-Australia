@@ -12,11 +12,11 @@
   "padding": {
     "left": 8,
     "right": 16,
-    "top": 18,
+    "top": 52,
     "bottom": 8
   },
   "config": {
-    "font": "Arial",
+    "font": "Source Sans 3",
     "view": {
       "stroke": null
     },
@@ -24,7 +24,7 @@
       "domain": false,
       "gridColor": "#e4e8df",
       "labelColor": "#526863",
-      "labelFontSize": 11,
+      "labelFontSize": 12,
       "titleColor": "#526863",
       "titleFontSize": 12,
       "titleFontWeight": "normal",
@@ -34,7 +34,7 @@
     },
     "legend": {
       "labelColor": "#526863",
-      "labelFontSize": 11,
+      "labelFontSize": 12,
       "titleColor": "#526863",
       "titleFontSize": 12,
       "titleFontWeight": "normal",
@@ -108,7 +108,7 @@
         ],
         "range": [
           "#226b64",
-          "#ad6819",
+          "#607d9c",
           "#dce5d9"
         ]
       },
@@ -187,6 +187,40 @@
         },
         "color": {
           "value": "#163b3d"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.age_group==='25–34' && datum.status==='Registered marriage'"
+        },
+        {
+          "calculate": "'Ages 25–34: '+format(datum.share_pct,'.1f')+'% married'",
+          "as": "insight"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "fontSize": 13,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "value": 0
+        },
+        "x2": null,
+        "y": {
+          "value": -30
+        },
+        "y2": null,
+        "color": {
+          "value": "#163b3d"
+        },
+        "text": {
+          "field": "insight"
         }
       }
     }

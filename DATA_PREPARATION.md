@@ -39,3 +39,19 @@ Percentages use a 0–100 scale. Percentage-point changes and percentage changes
 - Regional fertility is the average of calendar-year rates for the three years ending in the reference year. The comparison is 2013 versus 2024. Regional mother-age change is 2011–2024; birth counts and population are 2024. These reference periods must not be collapsed into one label.
 - The 88 matched SA4 regions account for 291,330 registered births in 2024, compared with 292,318 nationally. They are the matched map universe, not every national record or non-spatial category.
 - Related aggregate trends do not establish causal relationships or individual trajectories.
+
+## Scroll-linked presentation
+
+The parent-age opening reveals the published annual observations through the selected year, with a faint complete series retained for context. The year and age scales remain fixed. Direct labels and readouts refer to the selected observed year; no new annual ages are estimated. The fertility story outlines 1964, 1994, 2000 and 2024 while preserving every heatmap rate and the common colour scale. Scrolling and manual controls change presentation signals, not the underlying statistical tables. Reduced-motion preferences display the complete opening series by default.
+
+## Geographic reference outline and decorative artwork
+
+`sa4_cartogram_outline.json` contains a coastline path derived from the union of the existing matched ABS 2021 SA4 display boundaries. Interior boundaries are removed, exterior coastlines are simplified by 0.025 degrees, and islands below 0.02 square degrees are omitted from this orientation guide. The source map and regional values are unchanged. The path uses the cartogram’s original Australian conic equal-area projection and the exact affine transformation recovered from its stored `anchor_x` and `anchor_y` fields; the maximum anchor discrepancy is below 0.000001 layout units. The coastline appears in a separate geographic reference map. The original geographic anchor and displaced circle are highlighted together when a region is selected. Circles are scaled uniformly in both axes; their sizes remain proportional to population.
+
+The family and couple silhouettes are AI-generated decorative illustrations. They represent no statistical observations and are kept behind narrative headings, outside the chart panels.
+
+## Population dots in the current geographic map
+
+`population_dots_2024.json` contains 1,088 illustrative dots across 88 SA4 regions. A region receives its 2024 population divided by 25,000 and rounded to the nearest integer. Together these dots represent 27,200,000 people, compared with the actual matched-region total of 27,189,375. Dot placements are visual layout coordinates, not individual records or observed residential locations.
+
+Each regional polygon is transformed to the same Australian conic equal-area projection used by the maps. Uniform samples are drawn within that projected polygon using a separate deterministic random generator with seed `3179 + numeric SA4 code`, and then transformed back to longitude/latitude for display. The published regional totals and fertility values remain unchanged. Colour and region selection use the joined official regional data. Earlier cartogram geometry files are retained as unused source assets; the page now loads the dot-density specification.

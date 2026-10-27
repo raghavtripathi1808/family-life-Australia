@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Median ages of mothers and fathers for all registered births, 1975–2024. These are not first-parenthood ages.",
+  "description": "Median ages of mothers and fathers for all registered births, 1975–2024. These are not first-parenthood ages. Scroll and the accessible year control reveal observed annual values against the complete faint series. The axes are fixed and no values between annual observations are fabricated.",
   "width": "container",
-  "height": 275,
+  "height": 390,
   "autosize": {
     "type": "fit-x",
     "contains": "padding",
@@ -16,7 +16,7 @@
     "bottom": 8
   },
   "config": {
-    "font": "Arial",
+    "font": "Source Sans 3",
     "view": {
       "stroke": null
     },
@@ -24,7 +24,7 @@
       "domain": false,
       "gridColor": "#e4e8df",
       "labelColor": "#526863",
-      "labelFontSize": 11,
+      "labelFontSize": 12,
       "titleColor": "#526863",
       "titleFontSize": 12,
       "titleFontWeight": "normal",
@@ -34,7 +34,7 @@
     },
     "legend": {
       "labelColor": "#526863",
-      "labelFontSize": 11,
+      "labelFontSize": 12,
       "titleColor": "#526863",
       "titleFontSize": 12,
       "titleFontWeight": "normal",
@@ -80,8 +80,10 @@
         "format": "d",
         "values": [
           1975,
-          1990,
+          1985,
+          1995,
           2005,
+          2015,
           2024
         ],
         "grid": false
@@ -146,33 +148,56 @@
     {
       "mark": {
         "type": "line",
-        "strokeWidth": 2.4
+        "strokeWidth": 2,
+        "opacity": 0.12,
+        "aria": false,
+        "tooltip": false
+      },
+      "encoding": {
+        "tooltip": null
       }
     },
     {
       "transform": [
         {
-          "filter": "datum.year===2024"
+          "filter": "datum.year <= revealYear"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3.1
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === revealYear"
         }
       ],
       "mark": {
         "type": "point",
         "filled": true,
-        "size": 50
+        "size": 85,
+        "stroke": "#fffefa",
+        "strokeWidth": 2
       }
     },
     {
       "transform": [
         {
-          "filter": "datum.year===2024"
+          "filter": "datum.year === revealYear"
         }
       ],
       "mark": {
         "type": "text",
-        "align": "right",
-        "dx": -4,
-        "dy": -11,
-        "fontSize": 11,
+        "align": {
+          "expr": "revealYear < 1990 ? 'left' : 'right'"
+        },
+        "dx": {
+          "expr": "revealYear < 1990 ? 10 : -10"
+        },
+        "dy": -13,
+        "fontSize": 13,
         "fontWeight": "bold"
       },
       "encoding": {
@@ -180,6 +205,12 @@
           "field": "direct_label"
         }
       }
+    }
+  ],
+  "params": [
+    {
+      "name": "revealYear",
+      "value": 2024
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v6.json",
-  "description": "Dorling cartogram of 88 SA4 regions. Circle area represents 2024 population; colour represents the fall in fertility from the three-year averages ending 2013 to 2024. Circle positions were displaced from the Australian equal-area projection to avoid overlaps. Geographic distance and land area are deliberately distorted.",
+  "description": "Dorling population cartogram of 88 SA4 regions, with a separate geographic reference map. Circle area represents 2024 population and colour represents fertility decline. Circle positions are displaced to avoid overlap. The reference map retains true geography and highlights the selected region in gold, using the original geographic anchors. Circle sizes and positions use one common scale factor.",
   "width": 930,
   "height": 620,
   "autosize": {
@@ -16,20 +16,22 @@
   },
   "background": "#fffefa",
   "config": {
-    "font": "Arial",
+    "font": "Source Sans 3",
     "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial",
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3",
       "labelColor": "#526863",
       "titleColor": "#526863",
       "domain": false,
       "tickColor": "#cad5c9",
       "gridColor": "#e4e8df",
-      "titleFontWeight": "normal"
+      "titleFontWeight": "normal",
+      "labelFontSize": 12,
+      "titleFontSize": 12
     },
     "legend": {
-      "labelFont": "Arial",
-      "titleFont": "Arial",
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3",
       "labelColor": "#526863",
       "titleColor": "#526863",
       "titleFontWeight": "normal",
@@ -39,13 +41,46 @@
           "margin": 12,
           "anchor": "start"
         }
-      }
+      },
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "text": {
+      "font": "Source Sans 3"
     }
   },
   "signals": [
     {
       "name": "region",
       "value": ""
+    },
+    {
+      "name": "sideReference",
+      "update": "width >= 760"
+    },
+    {
+      "name": "referenceWidth",
+      "update": "sideReference ? min(230, width*.24) : 150"
+    },
+    {
+      "name": "cartogramWidth",
+      "update": "sideReference ? width-referenceWidth-28 : width"
+    },
+    {
+      "name": "cartogramHeight",
+      "update": "cartogramWidth*.65"
+    },
+    {
+      "name": "cartogramTop",
+      "update": "sideReference ? 12 : 200"
+    },
+    {
+      "name": "referenceScale",
+      "update": "(referenceWidth-10)/637.0744924998742"
+    },
+    {
+      "name": "referenceX",
+      "update": "sideReference ? cartogramWidth+28 : 8"
     }
   ],
   "data": [
@@ -55,6 +90,23 @@
       "format": {
         "type": "json"
       }
+    },
+    {
+      "name": "coastline",
+      "url": "assets/sa4_cartogram_outline.json",
+      "format": {
+        "type": "json"
+      }
+    },
+    {
+      "name": "selectedRegion",
+      "source": "regions",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "region !== '' && datum.sa4_code_2021 === region"
+        }
+      ]
     }
   ],
   "scales": [
@@ -65,7 +117,12 @@
         0,
         1000
       ],
-      "range": "width",
+      "range": [
+        0,
+        {
+          "signal": "cartogramWidth"
+        }
+      ],
       "zero": true
     },
     {
@@ -76,9 +133,11 @@
         650
       ],
       "range": [
-        0,
         {
-          "signal": "height"
+          "signal": "cartogramTop"
+        },
+        {
+          "signal": "cartogramTop+cartogramHeight"
         }
       ],
       "zero": true
@@ -106,7 +165,7 @@
       "range": [
         0,
         {
-          "signal": "4*0.0024911017301057718/PI*1000000*pow(width/1000,2)"
+          "signal": "4*0.0024911017301057718/PI*1000000*pow(cartogramWidth/1000,2)"
         }
       ],
       "zero": true
@@ -219,6 +278,172 @@
           }
         }
       }
+    },
+    {
+      "type": "group",
+      "name": "geographicReference",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "referenceX"
+          },
+          "y": {
+            "value": 18
+          },
+          "width": {
+            "signal": "referenceWidth"
+          },
+          "height": {
+            "value": 240
+          }
+        }
+      },
+      "marks": [
+        {
+          "type": "text",
+          "encode": {
+            "update": {
+              "x": {
+                "value": 0
+              },
+              "y": {
+                "value": 0
+              },
+              "text": {
+                "value": "Geographic reference"
+              },
+              "fontSize": {
+                "value": 11
+              },
+              "fontWeight": {
+                "value": "bold"
+              },
+              "fill": {
+                "value": "#526863"
+              }
+            }
+          }
+        },
+        {
+          "type": "path",
+          "from": {
+            "data": "coastline"
+          },
+          "interactive": false,
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "-144.66766444423274*referenceScale"
+              },
+              "y": {
+                "signal": "20-14.62858136624925*referenceScale"
+              },
+              "path": {
+                "field": "path"
+              },
+              "scaleX": {
+                "signal": "referenceScale"
+              },
+              "scaleY": {
+                "signal": "referenceScale"
+              },
+              "fill": {
+                "value": "#edf0e8"
+              },
+              "stroke": {
+                "value": "#8b9f98"
+              },
+              "strokeWidth": {
+                "value": 1.3
+              }
+            }
+          }
+        },
+        {
+          "type": "symbol",
+          "from": {
+            "data": "selectedRegion"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "(datum.anchor_x-144.66766444423274)*referenceScale"
+              },
+              "y": {
+                "signal": "20+(datum.anchor_y-14.62858136624925)*referenceScale"
+              },
+              "shape": {
+                "value": "circle"
+              },
+              "size": {
+                "value": 55
+              },
+              "fill": {
+                "value": "#ad6819"
+              },
+              "stroke": {
+                "value": "#fffefa"
+              },
+              "strokeWidth": {
+                "value": 1.5
+              },
+              "tooltip": {
+                "signal": "{'Original map location':datum.sa4_name}"
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "sideReference ? 0 : referenceWidth+14"
+              },
+              "y": {
+                "signal": "sideReference ? 38+589.0419781180009*referenceScale : 44"
+              },
+              "text": {
+                "signal": "region === '' ? ['Select a region','to locate it here.'] : ['Gold marks the','selected region.']"
+              },
+              "fontSize": {
+                "value": 10
+              },
+              "fill": {
+                "value": "#526863"
+              },
+              "limit": {
+                "signal": "sideReference ? referenceWidth : max(125,width-referenceWidth-30)"
+              },
+              "lineHeight": {
+                "value": 15
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "sideReference ? 0 : referenceWidth+14"
+              },
+              "y": {
+                "signal": "sideReference ? 82+589.0419781180009*referenceScale : 88"
+              },
+              "text": {
+                "value": "Circles show population."
+              },
+              "fontSize": {
+                "value": 10
+              },
+              "fill": {
+                "value": "#526863"
+              }
+            }
+          }
+        }
+      ]
     }
   ]
 }

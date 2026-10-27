@@ -16,23 +16,30 @@
   },
   "background": "#fffefa",
   "config": {
-    "font": "Arial",
+    "font": "Source Sans 3",
     "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial",
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3",
       "labelColor": "#526863",
       "titleColor": "#526863",
       "domain": false,
       "tickColor": "#cad5c9",
       "gridColor": "#e4e8df",
-      "titleFontWeight": "normal"
+      "titleFontWeight": "normal",
+      "labelFontSize": 12,
+      "titleFontSize": 12
     },
     "legend": {
-      "labelFont": "Arial",
-      "titleFont": "Arial",
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3",
       "labelColor": "#526863",
       "titleColor": "#526863",
-      "titleFontWeight": "normal"
+      "titleFontWeight": "normal",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "text": {
+      "font": "Source Sans 3"
     }
   },
   "signals": [

@@ -5,11 +5,12 @@ const DATA_DIRECTORY = 'Family_Life_Australia_Data/data/';
 const chartViews = new Map();
 const chartJobs = new Map();
 const resourceCache = new Map();
-const appState = {censusYear: 2021, selectedSex: 'People', region: '', focusYear: 2024, showPeak: true};
+const appState = {censusYear: 2021, selectedSex: 'People', region: '', showPeak: true, revealYear: 2024, storyYear: 1964, storyActive: true};
 const censusCharts = new Set(['never-married', 'partnerships', 'family-links', 'family-types']);
 const mapCharts = new Set(['fertility-map', 'births-map', 'population-map']);
 let chartRegistry = [];
 let regionRows = [];
+let hildaSummaryRows = [];
 
 function resourceText(url) {
   if (!resourceCache.has(url)) {
@@ -34,9 +35,11 @@ async function hydrateData(object) {
 }
 
 function plotHeight(chart, width) {
-  if (chart.id === 'population-map') return Math.round(width * .65 + 150);
+  if (chart.id === 'parent-ages') return Math.round(Math.max(225, Math.min(380, width * .35, (window.innerHeight || 900) - 500)));
+  if (chart.id === 'fertility') return Math.round(Math.max(160, Math.min(282, (window.innerHeight || 900) - 600)));
+  if (chart.id === 'population-map') return Math.round(width * .70 + 120);
   if (chart.id === 'fertility-map' || chart.id === 'births-map') return Math.max(260, Math.round(width * .69 + 45));
-  if (chart.id === 'profiles' && width < 500) return 345;
+  if (chart.id === 'profiles') return width < 500 ? 460 : 500;
   return chart.height;
 }
 
@@ -59,7 +62,6 @@ function compactSettings(spec, chart, width) {
   }
   if (chart.id === 'population-map' && width < 600) {
     spec.legends[0].gradientLength = 130;
-    spec.legends[1].values = [200000, 1000000];
   }
 }
 
@@ -84,7 +86,7 @@ async function renderChart(chart) {
     status.textContent = 'Loading chart…';
     try {
       const spec = JSON.parse(await resourceText(chart.src));
-      await hydrateData(spec);
+      await Promise.all([hydrateData(spec), document.fonts.ready]);
       const width = Math.max(250, Math.floor(host.clientWidth));
       spec.width = width;
       spec.height = plotHeight(chart, width);
@@ -100,6 +102,7 @@ async function renderChart(chart) {
       await view.runAsync();
       status.hidden = true;
       host.style.minHeight = '0';
+      document.dispatchEvent(new CustomEvent('chartready', {detail: {id: chart.id}}));
       if (mapCharts.has(chart.id)) {
         view.addEventListener('click', (_event, item) => {
           const datum = item?.datum;
@@ -108,19 +111,23 @@ async function renderChart(chart) {
         });
       }
       let previousWidth = width;
+      let previousHeight = spec.height;
       let animationFrame;
       const resize = () => {
         const nextWidth = Math.max(250, Math.floor(host.clientWidth));
-        if (Math.abs(nextWidth - previousWidth) < 2) return;
+        const nextHeight = plotHeight(chart, nextWidth);
+        if (Math.abs(nextWidth - previousWidth) < 2 && nextHeight === previousHeight) return;
         previousWidth = nextWidth;
+        previousHeight = nextHeight;
         cancelAnimationFrame(animationFrame);
         animationFrame = requestAnimationFrame(() => {
           view.width(nextWidth).height(plotHeight(chart, nextWidth)).resize().runAsync().catch(error => chartError(chart.id, error));
         });
       };
+      window.addEventListener('resize', resize);
       let observer;
       if ('ResizeObserver' in window) { observer = new ResizeObserver(resize); observer.observe(host); }
-      else window.addEventListener('resize', resize);
+
       window.addEventListener('pagehide', () => {
         observer?.disconnect();
         window.removeEventListener('resize', resize);
@@ -204,6 +211,26 @@ async function prepareValueTable() {
   select.addEventListener('change', update); update();
 }
 
+function updateHildaSummary(sex) {
+  document.getElementById('hilda-significance').textContent = sex === 'Women'
+    ? 'Women aged 26–29: the report does not flag this increase as statistically significant. It may reflect sampling uncertainty under the report’s 10% test. The other two age-group increases meet that test.'
+    : 'The report flags all three selected age-group increases as statistically significant: they meet its test for change beyond sampling uncertainty (10% threshold).';
+  const rows = hildaSummaryRows.filter(row => row.sex === sex && row.age_group === 'All 18-29');
+  const start = rows.find(row => row.year === 2001);
+  const end = rows.find(row => row.year === 2024);
+  if (!start || !end) return;
+  const group = sex === 'People' ? 'all people' : sex.toLowerCase();
+  const p = document.getElementById('hilda-summary');
+  const emphasis = document.createElement('strong');
+  emphasis.textContent = `${start.living_with_parents_pct.toFixed(1)}% in 2001 to ${end.living_with_parents_pct.toFixed(1)}% in 2024`;
+  p.replaceChildren(`Across ${group} aged 18–29, the share living with parents rose from `, emphasis, `: a reported increase of ${end.reported_change_2001_2024_pp.toFixed(1)} percentage points. Published changes use unrounded values and can differ slightly from subtraction of the displayed endpoints.`);
+}
+
+async function prepareHildaSummary() {
+  hildaSummaryRows = vega.read(await resourceText(DATA_DIRECTORY + 'living_with_parents.csv'), {type: 'csv', parse: {year: 'number', living_with_parents_pct: 'number', reported_change_2001_2024_pp: 'number'}});
+  updateHildaSummary(appState.selectedSex);
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   if (!window.vega || !window.vegaEmbed) {
     for (const element of document.querySelectorAll('.chart-host')) chartError(element.dataset.chart, new Error('Chart libraries unavailable'));
@@ -212,7 +239,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     chartRegistry = JSON.parse(await resourceText('charts/registry.json'));
     document.getElementById('peak-toggle').addEventListener('change', event => void updateSignal('showPeak', event.target.checked, ['fertility']));
-    document.getElementById('ridge-year').addEventListener('change', event => void updateSignal('focusYear', Number(event.target.value), ['profiles']));
     for (const select of document.querySelectorAll('.census-year')) select.addEventListener('change', event => {
       const year = Number(event.target.value);
       document.querySelectorAll('.census-year').forEach(other => { other.value = String(year); });
@@ -221,12 +247,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
     document.getElementById('hilda-sex').addEventListener('change', event => {
       const sex = event.target.value;
-      document.getElementById('hilda-significance').textContent = sex === 'Women'
-        ? 'For women aged 26–29, the report does not mark the 2001–2024 change as statistically significant at its 10% threshold. The displayed endpoint estimates remain valid; no significant-change value is imputed.'
-        : 'The report marks the three selected age-group changes as statistically significant at its 10% threshold. Published changes use unrounded estimates.';
+      updateHildaSummary(sex);
       void updateSignal('selectedSex', sex, ['leaving-home']);
     });
     void prepareRegionControl().catch(error => console.error('Region selector:', error));
+    void prepareHildaSummary().catch(error => console.error('HILDA summary:', error));
     void prepareValueTable().catch(error => console.error('Value table:', error));
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(entries => {

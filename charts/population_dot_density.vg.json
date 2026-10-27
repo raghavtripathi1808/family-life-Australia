@@ -1,0 +1,338 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Population dot-density map of 88 Australian SA4 regions. One illustrative dot represents approximately 25,000 residents in 2024. Dot centres are sampled deterministically within the correct region in an equal-area projection, not at observed addresses. Colour represents the regional fertility decline between the three-year averages ending 2013 and 2024.",
+  "width": 930,
+  "height": 620,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding",
+    "resize": true
+  },
+  "padding": {
+    "left": 12,
+    "right": 12,
+    "top": 12,
+    "bottom": 18
+  },
+  "background": "#fffefa",
+  "signals": [
+    {
+      "name": "region",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "name": "geography",
+      "url": "assets/sa4_2021.geojson",
+      "format": {
+        "type": "json",
+        "property": "features"
+      }
+    },
+    {
+      "name": "regions",
+      "url": "assets/sa4_points_2021.json",
+      "format": {
+        "type": "json"
+      }
+    },
+    {
+      "name": "populationDots",
+      "url": "assets/population_dots_2024.json",
+      "format": {
+        "type": "json",
+        "property": "dots"
+      },
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "regions",
+          "key": "sa4_code_2021",
+          "fields": [
+            "sa4_code_2021"
+          ],
+          "values": [
+            "sa4_name",
+            "state_name",
+            "population_2024_count",
+            "fertility_decline"
+          ],
+          "as": [
+            "sa4_name",
+            "state_name",
+            "population_2024_count",
+            "fertility_decline"
+          ]
+        },
+        {
+          "type": "geopoint",
+          "projection": "australia",
+          "fields": [
+            "longitude",
+            "latitude"
+          ],
+          "as": [
+            "x",
+            "y"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cityLabels",
+      "source": "regions",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "indexof(['Perth - Inner','Sydney - City and Inner South','Melbourne - Inner'],datum.sa4_name)>=0"
+        },
+        {
+          "type": "formula",
+          "expr": "split(datum.sa4_name,' - ')[0]",
+          "as": "city"
+        },
+        {
+          "type": "geopoint",
+          "projection": "australia",
+          "fields": [
+            "longitude",
+            "latitude"
+          ],
+          "as": [
+            "x",
+            "y"
+          ]
+        }
+      ]
+    }
+  ],
+  "projections": [
+    {
+      "name": "australia",
+      "type": "conicEqualArea",
+      "parallels": [
+        -18,
+        -36
+      ],
+      "rotate": [
+        -132,
+        0,
+        0
+      ],
+      "center": [
+        0,
+        -27
+      ],
+      "fit": {
+        "signal": "data('geography')"
+      },
+      "size": {
+        "signal": "[width,height]"
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "decline",
+      "type": "linear",
+      "domain": [
+        0,
+        0.7
+      ],
+      "range": [
+        "#e9f1e5",
+        "#185b59"
+      ],
+      "zero": true
+    }
+  ],
+  "legends": [
+    {
+      "fill": "decline",
+      "title": "Fall in births per woman",
+      "orient": "bottom",
+      "direction": "horizontal",
+      "gradientLength": 180,
+      "values": [
+        0,
+        0.2,
+        0.4,
+        0.6
+      ],
+      "format": ".1f",
+      "titleLimit": 240,
+      "offset": 15
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3",
+    "legend": {
+      "labelColor": "#526863",
+      "titleColor": "#526863",
+      "titleFontSize": 12,
+      "labelFontSize": 12,
+      "titleFontWeight": "normal"
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "text": {
+      "font": "Source Sans 3"
+    }
+  },
+  "marks": [
+    {
+      "type": "shape",
+      "from": {
+        "data": "geography"
+      },
+      "transform": [
+        {
+          "type": "geoshape",
+          "projection": "australia"
+        }
+      ],
+      "encode": {
+        "update": {
+          "fill": {
+            "value": "#f2f4ed"
+          },
+          "stroke": {
+            "signal": "region !== '' && datum.properties.sa4_code_2021 === region ? '#ad6819' : '#ccd7ce'"
+          },
+          "strokeWidth": {
+            "signal": "region !== '' && datum.properties.sa4_code_2021 === region ? 2 : .6"
+          },
+          "tooltip": {
+            "signal": "{'Region':datum.properties.sa4_name,'Population, 2024':format(datum.properties.population_2024_count,',')}"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {
+        "data": "populationDots"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "shape": {
+            "value": "circle"
+          },
+          "size": {
+            "signal": "width < 500 ? 10 : 17"
+          },
+          "fill": {
+            "scale": "decline",
+            "field": "fertility_decline"
+          },
+          "stroke": {
+            "signal": "region !== '' && datum.sa4_code_2021 === region ? '#ad6819' : '#5d887c'"
+          },
+          "strokeWidth": {
+            "signal": "region !== '' && datum.sa4_code_2021 === region ? 1.7 : .35"
+          },
+          "opacity": {
+            "value": 0.94
+          },
+          "tooltip": {
+            "signal": "{'SA4 region':datum.sa4_name,'Population, 2024':format(datum.population_2024_count,','),'Fall in births per woman':format(datum.fertility_decline,'.2f'),'One illustrative dot':'about 25,000 residents'}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "cityLabels"
+      },
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "dx": {
+            "signal": "datum.city==='Perth' ? 10 : -10"
+          },
+          "dy": {
+            "signal": "datum.city==='Melbourne' ? 13 : -9"
+          },
+          "align": {
+            "signal": "datum.city==='Perth' ? 'left' : 'right'"
+          },
+          "text": {
+            "field": "city"
+          },
+          "fontSize": {
+            "signal": "width<500 ? 11 : 13"
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#193747"
+          },
+          "stroke": {
+            "value": "#fffefa"
+          },
+          "strokeWidth": {
+            "value": 3
+          },
+          "strokeOpacity": {
+            "value": 0.9
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "cityLabels"
+      },
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "dx": {
+            "signal": "datum.city==='Perth' ? 10 : -10"
+          },
+          "dy": {
+            "signal": "datum.city==='Melbourne' ? 13 : -9"
+          },
+          "align": {
+            "signal": "datum.city==='Perth' ? 'left' : 'right'"
+          },
+          "text": {
+            "field": "city"
+          },
+          "fontSize": {
+            "signal": "width<500 ? 11 : 13"
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#193747"
+          }
+        }
+      }
+    }
+  ]
+}

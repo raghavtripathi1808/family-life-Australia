@@ -11,28 +11,35 @@
   "padding": {
     "left": 12,
     "right": 12,
-    "top": 20,
+    "top": 46,
     "bottom": 16
   },
   "background": "#fffefa",
   "config": {
-    "font": "Arial",
+    "font": "Source Sans 3",
     "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial",
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3",
       "labelColor": "#526863",
       "titleColor": "#526863",
       "domain": false,
       "tickColor": "#cad5c9",
       "gridColor": "#e4e8df",
-      "titleFontWeight": "normal"
+      "titleFontWeight": "normal",
+      "labelFontSize": 12,
+      "titleFontSize": 12
     },
     "legend": {
-      "labelFont": "Arial",
-      "titleFont": "Arial",
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3",
       "labelColor": "#526863",
       "titleColor": "#526863",
-      "titleFontWeight": "normal"
+      "titleFontWeight": "normal",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "text": {
+      "font": "Source Sans 3"
     }
   },
   "signals": [
@@ -123,6 +130,16 @@
           "as": [
             "families_count"
           ]
+        }
+      ]
+    },
+    {
+      "name": "oneParentOneChild",
+      "source": "ribbons",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.parent_arrangement==='One-parent family' && toString(datum.dependent_children)==='1'"
         }
       ]
     }
@@ -352,6 +369,41 @@
           },
           "fontSize": {
             "value": 11
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "oneParentOneChild"
+      },
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width/2"
+          },
+          "y": {
+            "value": -13
+          },
+          "text": {
+            "signal": "'One-parent families: '+format(datum.within_arrangement_pct,'.1f')+'% have one child'"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "bottom"
+          },
+          "fontSize": {
+            "signal": "width<500 ? 12 : 13"
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#163b3d"
           }
         }
       }
